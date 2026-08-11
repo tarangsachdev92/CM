@@ -1,0 +1,171 @@
+def modules = [:]
+def userAborted = false
+def subscription
+def host
+def token
+
+pipeline {
+    agent {
+            kubernetes {
+                defaultContainer 'node20'
+                yamlFile './pods.yaml'
+            }
+        }
+        tools {
+            jfrog 'jfrog-cli'
+            snyk 'snyk@latest'
+        }
+    options{
+        timeout(time: 1800,unit: "SECONDS")
+    }
+    environment {
+        NPMRC = credentials('custom-jfrog-token')  
+    }
+    stages  {
+        stage("Git Checkout") {
+            steps {
+                script {
+                    withCredentials([usernamePassword(credentialsId: 'github-token', usernameVariable: 'GIT_USERNAME', passwordVariable: 'GIT_PASSWORD')]) {
+                        git branch: 'development', credentialsId: 'github-token', url: 'https://github.com/SC-DAWA/command_center_web.git'
+                    }
+                } 
+            }
+        }
+        stage('Sonar Analysis') {
+            steps {
+                script {
+                    container('sonar'){
+                        try {
+                        withSonarQubeEnv('SonarQube-Prod') {  
+                            sh "which sonar-scanner"
+                            sh "sonar-scanner --version" 
+                            sh '''
+                            sonar-scanner -Dsonar.projectKey=asx-kahi-commandcenter-web \
+                            -Dsonar.source=. \
+                            -Dsonar.branch.name=development \
+                            -Dsonar.host.url=https://sonarqube.kenvue.com/ \
+                            '''                  
+                            }
+                        }
+                        catch(Exception e) {
+                            echo 'Exception occurred: ' + e.toString()
+                            sh 'exit 1'
+                        }
+                    }
+                }
+            } 
+        }
+        stage('npm authentication') {
+            steps {
+                script {
+                    withCredentials([string(credentialsId: 'NEXUS_AUTH_B64', variable: 'NEXUS_PASSWORD')]) {
+                        writeFile file: '.npmrc', text: """
+                        registry=https://artifactrepo.kenvue.com/repository/asx-jegu-rc/
+                        //artifactrepo.kenvue.com/repository/asx-jegu-rc/:_auth=${NEXUS_PASSWORD}
+                        audit=false
+                        """.stripIndent()
+                    }    
+                }
+            }
+        }
+        stage('Package the WEB') {
+            steps {
+                script {
+                	withCredentials([string(credentialsId: 'NEXUS_AUTH_B64', variable: 'NEXUS_PASSWORD')]) {
+                        try {
+                            sh 'npm install konnect-react-components --registry https://artifactrepo.kenvue.com/repository/asx-jegu-rc/ -f'
+                            sh 'npm install --verbose --registry=https://artifactrepo.kenvue.com/repository/asx-jegu-rc/'
+                            //sh 'npm t -- --coverage --watchAll=false'
+                            sh 'npm run build-dev'
+                            sh 'ls -l'
+                        }
+                        catch(Exception e) {
+                            echo 'Exception occurred: ' + e.toString()
+                            sh 'exit 1'
+                        }
+                    }
+                }
+            }
+        } 
+        stage('Zipping the build file') {
+            steps {
+                script {
+                    try {
+                        dir('dist') { 
+                        sh "chmod +x -R ${env.WORKSPACE}"
+                        sh "zip -r \"command-web-dev.${env.BUILD_NUMBER}.zip\" . " 
+                        sh "ls -l"                     
+                        }
+                    }
+                    catch(Exception e) {
+                        echo 'Exception occurred: ' + e.toString()
+                          sh 'exit 1'
+                    }
+                }
+            } 
+        }
+        stage('Publish artifact to Nexus') {
+            steps {
+                script {
+                    def nexusUrl = 'https://artifactrepo.kenvue.com/repository'
+                    def zipFilePath = "dist/command-web-dev.${env.BUILD_NUMBER}.zip"
+                    def targetPath = "kahi-generic/command-center-web-dev/" 
+                    withCredentials([usernamePassword(credentialsId: 'nexus-token', passwordVariable: 'NEXUS_PASSWORD', usernameVariable: 'NEXUS_USERNAME')]) {
+                     sh """
+                         curl -u \${NEXUS_USERNAME}:\${NEXUS_PASSWORD} -T ${zipFilePath} ${nexusUrl}/${targetPath}
+                        """
+                    }
+                }
+            }
+        }
+        stage('Deploying WEB') {
+            steps {
+              withCredentials([azureServicePrincipal('app-DTO-CommandCenter-web-dev')]) {
+                script {
+                    try {
+                        dir('dist') {
+                        sh "chmod +x -R ${env.WORKSPACE}"
+                        echo "[INFO]-----------------Deployment started--------------------"
+                        sh '''  
+                           
+                            ls -l
+                            az login --service-principal --username "\${AZURE_CLIENT_ID}" --password "\${AZURE_CLIENT_SECRET}" --tenant "\${AZURE_TENANT_ID}"
+                           
+                        '''
+                        sh "${env.WORKSPACE}/automation_scripts/deployment.sh 'command-web-dev.${env.BUILD_NUMBER}.zip' 'app-DTO-CommandCenter-web-dev' 'home/site/wwwroot/' 'AZR-WDZ-Appservice-Development' 'AZR-WDZ'"
+                        echo "[INFO]-----------------Deployment completed--------------------"
+                        }
+                    }
+                    catch(Exception e) {
+                        echo 'Exception occurred: ' + e.toString()
+                        sh 'exit 1'
+                    }
+                }
+              }
+            }
+        }
+    }
+    post {
+        always {
+            script {
+                // Capture the build status and prepare variables
+                def buildStatus = currentBuild.currentResult
+                def buildUrl = env.BUILD_URL  
+                def buildNumber = env.BUILD_NUMBER
+                def date = new Date().format("yyyy-MM-dd HH:mm:ss", TimeZone.getTimeZone("Asia/Kolkata"))
+                def env = "commandCenter-WEB-DEV"
+               // Prepare message content
+               def message = "Env:<b>${env}</b> <br> Build Status: ${buildStatus}<br>Build URL: ${buildUrl}<br>Date: ${date}"
+                // Define message color based on build status
+                def color = buildStatus == 'SUCCESS' ? 'Green' : 'Red'
+
+                withCredentials([string(credentialsId: 'commandCenter-webhook', variable: 'WEBHOOK_URL')]) {
+                // Send the message to Teams
+                    office365ConnectorSend message: message,
+                                           status: buildStatus,                                            color: color,
+                                           webhookUrl: "${WEBHOOK_URL}"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+@import '../../../assets/css/colors.scss';
+
+.card-children-content-text {
+    text-align: center;
+    color: $neutrals-B300;
+}
+
+.card-children-content-text-anchor {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+    color: $primary-green-700-color;
+    cursor: pointer;
+}
+
+.card-children-content-text-anchor:hover {
+    color: $primary-green-700-color;
+}
+
+.my-dashboard-card-children {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}

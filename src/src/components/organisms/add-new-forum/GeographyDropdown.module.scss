@@ -1,0 +1,30 @@
+/* anything we tagged becomes visually disabled */
+[data-geo-disabled="true"] {
+  color: #9aa1ab;
+  cursor: not-allowed;
+}
+
+/* dim radio/checkbox inside disabled rows */
+[data-geo-disabled="true"] input[type="radio"],
+[data-geo-disabled="true"] input[type="checkbox"],
+[data-geo-disabled="true"] .krc-radio,
+[data-geo-disabled="true"] .krc-checkbox {
+  opacity: 0.5;
+  filter: grayscale(100%);
+  pointer-events: none;  /* prevents toggling the bullet */
+}
+
+/* no active hover for disabled rows */
+[data-geo-disabled="true"]:hover {
+  background: transparent !important;
+}
+
+/* reinforce when aria-disabled exists */
+[role="option"][aria-disabled="true"] {
+  color: #9aa1ab;
+}
+[role="option"][aria-disabled="true"] input[type="radio"],
+[role="option"][aria-disabled="true"] .krc-radio {
+  opacity: 0.5;
+  filter: grayscale(100%);
+}

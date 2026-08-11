@@ -1,0 +1,24 @@
+{
+    "performacemng.title": "绩效管理",
+    "performacemng.subtitle":"选择绩效评估级别",
+    "performacemng.favorites":"我的收藏",
+    "performacemng.favoritespara":"尚未添加收藏。点击报告名称或报告地域旁边的心形图标，将报告添加到此处以便快速访问",
+    "performacemng.global":"全球",
+    "performacemng.region":"区域",
+    "performacemng.cluster":"集群",
+    "performacemng.market":"市场",
+    "performacemng.site":"站点",
+    "performacemng.chooseTime":"选择时间周期",
+    "performacemng.noMatchesFound":"未找到匹配项",
+    "performacemng.sorryNothingMatchesRecords":"抱歉，没有找到与您的搜索匹配的结果。请尝试使用其他词语。",
+    "performacemng.notTagged":"您在所选筛选条件下未被分配到任何报告。请申请访问以查看相关报告。",
+    "performacemng.searchResults":"搜索结果",
+    "performacemng.reportsAccess":"您可访问的报告",
+    "performacemng.reportsOutsideAccess":"超出您访问权限的报告",
+    "performacemng.noReportsOutsideAccess":"在所选筛选条件下，没有超出您访问权限的报告",
+    "kpi.userRoleSettings": "用户角色设置",
+    "kpi.addPrAndSecRole": "添加主要和次要角色，以开始跟踪与您相关的KPI",
+    "kpi.noRoleSetup":"未设置角色",
+    "kpi.goto":"前往"
+    
+}

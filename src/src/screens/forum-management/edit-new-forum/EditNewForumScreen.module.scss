@@ -1,0 +1,80 @@
+@import '../../../assets/css/colors.scss';
+@import '../../../assets/css/fonts.scss';
+
+.personaCard {
+    border: 0.0625rem solid $neutrals-B40;
+    border-radius: 0.75rem;
+    padding: 1rem;    
+    min-height: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;    
+    cursor: pointer;
+
+    h4 {
+        margin: 0 0 0.5rem 0;
+        font-size: 1rem;
+        font-weight: 600;
+        color: $neutrals-B800;
+    }
+
+    p {
+        margin: 0;
+        font-size: 0.8125rem;
+        color: $neutrals-B400;
+        line-height: 1.4;
+    }   
+}
+.forum-title {
+    padding: 1.5rem 1.5rem 0 1.5rem;
+    border-radius: 0.5rem;
+    border-bottom: 0.0625rem solid $neutrals-B30;
+    box-shadow: 0.125rem 0.125rem 0.5rem 0 rgba(0, 0, 0, 0.06);    
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-color: $white-color;
+}
+
+.header-back-button {
+    align-self: flex-start;
+    padding-right: 0.5rem;
+    padding-top: 0.3rem;
+}
+
+.forum-heading{
+    font-size: $font-size-24;
+}
+
+.firstLine {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: $neutrals-B200;
+}
+
+.secondLine {
+    display: block;
+    font-size: 12px;
+    color: #6b6b6b;
+    margin-top: 4px;
+    color: $neutrals-B200;
+}
+
+.forum-access-check-tick-icon-btn{    
+    height: 40px;
+    width: 40px;
+    border: 1px solid #ccc;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    background: #ffffff;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.expandButton {
+    background-color: transparent;
+    border-width: 0rem;
+}

@@ -1,0 +1,57 @@
+@import '../../../../assets/css/colors.scss';
+@import '../../../../assets/css/common.scss';
+
+
+.notification-add-rule-flyout {    
+    z-index: 999;    
+    width: 10rem;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.add-rule-titles{
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 0.1rem;
+    margin-bottom: 0.5rem;
+    color: $neutrals-B800;
+}
+
+.rule-divider{
+    background: $neutrals-B40;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+
+.noti-rule-dropd-down{
+    margin-top: 1rem;
+}
+
+
+.trigger-frequency-link{    
+font-weight: 400;
+font-style: Regular;
+font-size: 12px;
+// line-height: 1.25rem;
+letter-spacing: 0px;
+text-decoration: underline;
+text-decoration-style: solid;
+text-decoration-thickness: 0%;
+text-decoration-skip-ink: auto;
+color: $primary-green-700-color;
+
+}
+
+.trigger-frequency-link:hover{
+    color: $primary-green-700-color;
+}
+
+
+.form-required-fields {
+    color: $alert-icon-color;
+}

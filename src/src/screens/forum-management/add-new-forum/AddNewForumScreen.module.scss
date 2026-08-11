@@ -1,0 +1,284 @@
+@import '../../../assets/css/colors.scss';
+@import '../../../assets/css/common.scss';
+@import '../../../assets/css/fonts.scss';
+
+.container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 1rem;
+    position: relative !important;
+}
+
+.personaCard {
+    border: 0.0625rem solid $neutrals-B40;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    min-height: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    cursor: pointer;
+
+    h4 {
+        margin: 0 0 0.5rem 0;
+        font-size: 1rem;
+        font-weight: 600;
+        color: $neutrals-B800;
+    }
+
+    p {
+        margin: 0;
+        font-size: 0.8125rem;
+        color: $neutrals-B400;
+        line-height: 1.4;
+    }
+}
+
+.header {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $white-color;
+    border-radius: 0.5rem;
+    border-bottom: 0.0625rem solid $neutrals-B30;
+    box-shadow: 0.125rem 0.125rem 0.5rem 0rem rgba(0, 0, 0, 0.06);
+}
+
+.header-back-button {
+    align-self: flex-start;
+    padding-right: 0.5rem;
+    padding-top: 0.3125rem;
+}
+
+.header-title-container {
+    display: flex;
+    padding: 0rem;
+}
+
+.rowSpacing {
+    margin-top: 1.5rem; // 24px
+}
+
+.inputfield1 {
+    font-family: 'kenvue-sans';
+    font-weight: 1000; // fixed (1600 invalid)
+}
+
+.form-inputs-flex-col {
+    flex-direction: column;
+    width: 100%;
+}
+
+.header-action-container {
+    display: flex;
+}
+
+.dropdownWithLine {
+    border-top: 0.0625rem solid #e5e7eb;
+    padding-top: 0.75rem;
+    margin-top: 0.75rem;
+}
+
+.header-title {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    font-family: 'kenvue-sans';
+    line-height: 1rem;
+}
+
+.no-subtitle {
+    height: 1.25rem;
+}
+
+.form-category-heading {
+    margin: 1.5rem 0rem;
+}
+
+.form-category-heading-typography {
+    font-size: $font-size-14;
+    line-height: 1.25rem;
+    text-align: left;
+    color: $neutrals-B200;
+}
+
+.add-new-role-description {
+    color: $neutrals-B200;
+}
+
+.application-permissions-cell-title {
+    font-weight: 400;
+    font-size: 0.625rem;
+    line-height: 1rem;
+    letter-spacing: 0rem;
+    color: $neutrals-B200;
+}
+
+.application-permissions-cell-content {
+    font-weight: 400;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    letter-spacing: 0rem;
+    color: $black-color;
+}
+
+.role_permissions_column {
+    text-align: center;
+    display: auto;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.row-edit-filterchip-container {
+    max-width: calc(100% - 1rem) !important;
+}
+
+.row-view-filterchip-container {
+    max-width: calc(100% - 1.5rem) !important;
+}
+
+.row-edit-application-tag-selector-container {
+    right: 0 !important;
+}
+
+.row-edit-adgroup-tag-selector-container {
+    right: 0 !important;
+    margin-left: -3.125rem;
+}
+
+.custom-message {
+    display: flex;
+    align-items: center;
+    border-radius: 0.25rem;
+}
+
+.custom-message .info-icon {
+    color: red !important;
+    margin-right: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.custom-message .message {
+    color: red !important;
+}
+
+.application-tag-selector {
+    width: 100%;
+    position: relative !important;
+    z-index: 1000 !important;
+}
+
+.application-cell-container {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.error-text-color {
+    color: $feedback-error-color !important;
+}
+
+.error-text-container {
+    display: flex;
+    margin-bottom: 1.25rem; // 20px
+    align-items: center !important;
+    color: red !important;
+}
+
+.radio-group {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.tool-type-header {
+    padding: 1.5rem;
+    justify-content: left;
+    align-items: flex-start;
+    background-color: $white-color;
+    border-radius: 0.5rem;
+    border-bottom: 0.0625rem solid $neutrals-B30;
+    box-shadow: 0.125rem 0.125rem 0.5rem 0rem rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.persona-card {
+    border: 0.0625rem solid $neutrals-B40;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.persona-card-item {
+    border: 0.0625rem solid $neutrals-B40;
+    border-radius: 0.5rem;
+    padding: 0.375rem 0.75rem;
+}
+
+.persona-dropdown-option {
+    :global(.inputfield-label-inline-container) {
+        white-space: nowrap;
+        flex-shrink: 0;
+        padding: 0.0625rem 0.125rem;
+    }
+}
+
+.permissionTableWrapper :global(tbody tr:first-child td) {
+    background-color: $table-subrow-background-color;
+}
+
+.toggleHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.toggleContainer {
+    display: flex;
+    border: 0.0625rem solid #cdd5df;
+    border-radius: 0.25rem;
+}
+
+.toggleBtn {
+    border: none;
+    background: transparent;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.active {
+    border: 0.0625rem solid #5cb8a8;
+    background: #eefaf7;
+    color: #0f766e;
+    border-radius: 0.25rem;
+}
+
+.expandButton {
+    background-color: transparent;
+    border-width: 0rem;
+}
+
+.forum-access-check-tick-icon-btn{    
+    height: 40px;
+    width: 40px;
+    border: 1px solid #ccc;
+    // border-radius: 0.25rem;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    background: #ffffff;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}

@@ -1,0 +1,50 @@
+@import '../src/assets/css/colors.scss';
+@import './assets/css/fonts.scss';
+
+.navbar {
+    background-color: $white-smoke;
+    padding-right: 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $neutrals-B40;
+    font-family: 'Kenvue-sans',sans-serif;
+    font-size: $font-size-14;
+    font-weight: 400;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    font-family: 'kenvue-sans', sans-serif;
+    font-size: $font-size-14;
+    text-decoration: none;
+    color: $black-color;
+}
+
+.nav-links a.active {
+    font-family: 'kenvue-sans-semi-bold', sans-serif;
+    font-size: $font-size-14;
+    text-decoration: none;
+    color: $primary-green-700-color;
+}
+
+.disabled-link .disabled {
+    color: $black-color;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.last-refreshed {
+    font-family: 'kenvue-sans', sans-serif;
+    font-size: $font-size-14;
+    color: #555;
+}

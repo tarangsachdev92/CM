@@ -1,0 +1,77 @@
+@import '../../../assets/css/fonts.scss';
+@import '../../../assets/css/colors.scss';
+
+.user-profile-settings-card {
+    margin-top: 24px;
+}
+
+.delegation-card-title {
+    font-size: $font-size-14;
+    font-weight: 600;
+    line-height: 20px;
+    color: $neutrals-B800;
+}
+
+.delegation-card-children-title {
+    font-size: $font-size-14;
+    color: $neutrals-B300;
+    line-height: 20px;
+}
+
+.delegation-card-children-label {
+    font-size: $font-size-12;
+    color: $neutrals-B300;
+    line-height: 20px;
+}
+
+.delegation-card-children-label-highlighted {
+    @extend .delegation-card-children-label;
+
+    button {
+        font-weight: 400;
+        text-align: center;
+        color: $primary-green-700-color;
+        cursor: pointer;
+        // Following CSS code is to create text-only button
+        background: none;
+        border: none;
+        margin: 0;
+        padding: 0;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+    }
+}
+
+.delegation-card-children {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.delegation-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; // pushes button to the right
+    gap: 12px;
+    margin-bottom: 12px; // spacing before the body
+}
+
+.delegation-card-title {
+    font-size: 16px;
+    font-weight: 600;
+    // keep your existing styles if any
+}
+
+/* Optional: tweak the text-button look/spacing */
+.secondary-role-card-title {
+    color: var(--brand-primary, $primary-green-700-color);
+    cursor: pointer;
+}
+
+.secondary-role-card-title-disabled {
+    color: var(--text-disabled, $neutrals-B100);
+    cursor: not-allowed;
+}

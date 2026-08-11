@@ -1,0 +1,250 @@
+@import '../../../assets/css/colors.scss';
+@import '../../../assets/css/common.scss';
+@import '../../../assets/css/fonts.scss';
+
+.container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 16px;
+    position: relative !important;
+    /* Add this line */
+}
+
+.header {
+    padding: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $white-color;
+    border-radius: 8px;
+    border-bottom: 1px solid $neutrals-B30;
+    box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.06);
+}
+
+.header-back-button {
+    align-self: flex-start;
+    padding-right: 8px;
+    padding-top: 5px;
+}
+
+.header-title-container {
+    display: flex;
+}
+
+.header-action-container {
+    display: flex;
+}
+
+.header-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.no-subtitle {
+    height: 20px;
+    /* Adjust this height to match the subtitle height */
+}
+
+.form-category-heading {
+    margin: 24px 0px;
+}
+
+.form-category-heading-typography {
+    font-size: $font-size-14;
+    line-height: 20px;
+    text-align: left;
+    color: $neutrals-B200;
+}
+
+.form-inputs-flex-col {
+    flex-direction: column;
+    width: 100%;
+}
+
+.add-new-role-description {
+    color: $neutrals-B200;
+}
+
+// Access and Permissions styling
+
+.application-permissions-cell-title {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 16px;
+    letter-spacing: 0px;
+    color: $neutrals-B200;
+}
+
+.application-permissions-cell-content {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0px;
+    color: $black-color;
+}
+
+.role_permissions_column {
+    text-align: center;
+    display: auto;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.row-edit-filterchip-container {
+    max-width: calc(100% - 16px) !important;
+}
+
+.row-view-filterchip-container {
+    max-width: calc(100% - 24px) !important;
+}
+
+.row-edit-application-tag-selector-container {
+    right: 0 !important;
+}
+
+.row-edit-adgroup-tag-selector-container {
+    right: 0 !important;
+    margin-left: -50px !important;
+}
+
+.custom-message {
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.custom-message .info-icon {
+    color: red !important;
+    margin-right: 8px;
+    font-size: 24px !important;
+}
+
+.custom-message .message {
+    color: red !important;
+}
+
+.application-tag-selector {
+    width: 100%;
+    position: relative !important;
+    /* Ensure the dropdown is positioned absolutely within its parent */
+    z-index: 1000 !important;
+}
+
+.application-cell-container {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.error-text-color {
+    color: $feedback-error-color !important;
+}
+
+.error-text-container {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center !important;
+    color: red !important;
+}
+
+.radio-group {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.tool-type-header {
+    padding: 24px;
+    justify-content: left;
+    align-items: flex-start;
+    background-color: $white-color;
+    border-radius: 8px;
+    border-bottom: 1px solid $neutrals-B30;
+    box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.persona-card {
+    border: 1px solid $neutrals-B40;
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+}
+
+.persona-card-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.persona-card-item {
+    border: 1px solid $neutrals-B40;
+    border-radius: 8px;
+    padding: 6px 12px;
+}
+
+// .persona-card-dropdown-container {
+//     .persona-dropdown-option {
+//         background-color: #000;
+//         .inputfield-label-inline-container {
+//             white-space: "nowrap" !important;
+//             flex-shrink: 0 !important;
+//         }
+//     }
+// }
+
+.persona-dropdown-option {
+    :global(.inputfield-label-inline-container) {
+        white-space: nowrap;
+        flex-shrink: 0;
+        padding: 1px 2px;
+    }
+}
+.permissionTableWrapper :global(tbody tr:first-child td) {
+    background-color: $table-subrow-background-color;
+}
+
+
+.report-level-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.report-level-label {
+    font-size: $font-size-12;
+    font-weight: 500;
+    color: $neutrals-B800;
+}
+
+.add-report-combination-dialog {
+    :global(.dialog-Small) {
+        width: 32.5rem !important;
+    }
+
+    :global(.dialog-actions) {
+        padding-top: 0 !important;
+    }
+
+    :global(.dialog-description) {
+        line-height: 1.25rem;
+        font-size: 0.75rem !important;
+    }
+
+    :global(.dropdown-component .dropdown-container .drop-down .inputfield-label-container) {
+        font-weight: 400;
+    }
+}
+
+.tool-confirmation-dialog {
+    :global(.dialog-content) {
+        line-height: 1.25rem;
+    }
+}

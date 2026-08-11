@@ -1,0 +1,79 @@
+@import '../../../assets/css/colors.scss';
+
+.role-selection-flyout{
+    z-index: 900;    
+}
+
+.request-new-role-ddl{
+    width: 23rem;
+}
+
+
+.role-name-banner{
+    background-color: $feedback-success-background;
+    width:100%;
+    border-top: 1px solid $feedback-success-stroke;
+    border-bottom: 1px solid $feedback-success-stroke;
+    padding: .75rem 1rem .75rem 0rem;
+    width:26.25rem;
+    padding-left: 1rem;
+}
+.role-name-banner p{
+    margin: 0;
+}
+
+.role-name-header{
+    font-size: .75rem;
+    color: $neutrals-B800;
+    font-weight: 600;
+}
+
+.role-name{
+    font-size:.75rem;
+    color:$neutrals-B500
+}
+
+
+.role-additional-info-flyout {
+    z-index: 900;    
+    :global(.flyout-body) {
+        padding: 0 !important;
+    }
+}
+
+.additional-info-content{
+    padding: 0.75rem 1rem;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height:80%
+}
+
+
+.application-cell-container {
+    display: flex;
+    // align-items: center;
+    gap: .25rem;
+}
+
+.header-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.application-permissions-cell-content {
+    font-weight: 400;
+    font-size: .75rem;
+    line-height: 1.25rem;
+    letter-spacing: 0px;
+    color: $black-color;
+}
+
+.application-permissions-cell-title {
+    font-weight: 400;
+    font-size: 0.625rem;
+    line-height: 1rem;
+    letter-spacing: 0px;
+    color: $neutrals-B200;
+}

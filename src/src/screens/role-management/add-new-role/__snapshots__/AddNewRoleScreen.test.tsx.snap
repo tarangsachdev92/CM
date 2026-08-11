@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GeneralInformationForm /> renders general information form in add new role screen correctly 1`] = `
+<ContextProvider
+  value={
+    {
+      "getServerState": undefined,
+      "identityFunctionCheck": "once",
+      "stabilityCheck": "once",
+      "store": {
+        "@@observable": [Function],
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "subscription": {
+        "addNestedSub": [Function],
+        "getListeners": [Function],
+        "handleChangeWrapper": [Function],
+        "isSubscribed": [Function],
+        "notifyNestedSubs": [Function],
+        "trySubscribe": [Function],
+        "tryUnsubscribe": [Function],
+      },
+    }
+  }
+>
+  <AddNewRoleScreen />
+</ContextProvider>
+`;

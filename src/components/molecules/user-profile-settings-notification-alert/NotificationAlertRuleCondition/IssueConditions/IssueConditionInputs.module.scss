@@ -1,0 +1,97 @@
+@import '../../../../../assets/css/colors.scss';
+@import '../../../../../assets/css/common.scss';
+
+.issue-condition-module-cond-header-input-grp{
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.issue-condition-module-header-input-trash-button{
+    width: 8%;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 0px;
+    border-left: none;
+
+
+    &:hover {
+        border-color: $secondary-blue-300-color !important;
+        border-left: 1px solid  $secondary-blue-300-color !important;
+
+    }
+    &:focus,
+    &.ant-input-focused {
+      border-color: $secondary-blue-300-color !important;
+      box-shadow: none !important;
+      border-left: 1px solid  $secondary-blue-300-color !important;
+
+    }
+}
+
+
+.issue-condition-kpi-value {
+    font-family: 'kenvue-Sans', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0px;  
+    border-top-left-radius: 0px !important;  
+    border-bottom-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    border-top: none !important;
+
+    &:hover {
+        border-color: $secondary-blue-300-color !important;
+        border-top: 1px solid  $secondary-blue-300-color !important;
+
+    }
+    &:focus,
+    &.ant-input-focused {
+      border-color: $secondary-blue-300-color !important;
+      box-shadow: none !important;
+      border-top: 1px solid  $secondary-blue-300-color !important;
+
+    }
+}
+
+
+
+.issue-condition-kpi-value-is-title{
+    font-family: 'kenvue-Sans', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0px;      
+    border-bottom-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;  
+    border-bottom-right-radius: 0px !important;  
+    &:hover {
+        border-color: $secondary-blue-300-color !important;
+    }
+    &:focus,
+    &.ant-input-focused {
+      border-color: $secondary-blue-300-color !important;
+      box-shadow: none !important;
+    }
+}
+
+
+.issueInput-error-label {
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: $feedback-error-color-text-and-icon;
+}
+
+.error {
+    border-color: $feedback-error-color-text-and-icon;
+
+    &:focus,
+    &:hover {
+        border-color: $feedback-error-color-text-and-icon;
+
+    }
+}
+
+
+

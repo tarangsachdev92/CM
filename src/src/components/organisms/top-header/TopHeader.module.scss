@@ -1,0 +1,206 @@
+@import '../../../assets/css/colors.scss';
+@import '../../../assets/css/common.scss';
+
+.top-header-container {
+    position: relative; // Add this line
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.header-container {
+    background-color: $white-color;
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.05rem 2.25rem;
+    border-bottom: 0.125rem solid $neutrals-B40;
+    box-shadow: 0.125rem 0.125rem 1.25rem 0px rgba(0, 0, 0, 0.12);
+    z-index: 1200;
+    right: 0;
+    left: 56px;
+}
+
+.sub-header-container {
+    background-color: rgba(244, 246, 247, 1);
+    display: flex;
+    margin-top: calc(3vh + 2.1rem); //9vh
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2.25rem;
+    border-bottom: 0.125rem solid $neutrals-B40;
+    div {
+        span {
+            a {
+                color: $neutrals-B300 !important;
+            }
+        }
+        span:last-child {
+            a {
+                color: $neutrals-B800 !important;
+            }
+        }
+    }
+}
+
+.breadcrumb-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.breadcrumb-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.breadcrumb-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    padding: 8px 0;
+    z-index: 9999;
+}
+
+.menu-item {
+    padding: 12px 16px;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    background: #f5f5f5;
+}
+
+.sub-header-time-container {
+    margin-left: auto;
+}
+
+.sub-header-time-text {
+    color: $neutrals-B400;
+}
+
+.flex-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-container {
+    background: transparent; // Ensure the background is transparent
+    border: none; // Remove any borders
+    cursor: pointer; // Set cursor to pointer for button
+    flex-grow: 1; // Allow the button to grow and take available space
+    min-width: 100px; // Set a minimum width for the button
+    max-width: 200px; // Set a maximum width for the button
+    display: flex; // Use flex to allow proper alignment of items
+    align-items: center; // Center items vertically
+    padding: 0; // Remove any padding
+}
+
+.button-container:disabled {
+    svg path {
+        fill: $neutrals-B100;
+    }
+    div {
+        color: $neutrals-B100;
+    }
+    cursor: none;
+}
+
+.v-divider {
+    width: 1px;
+    height: 1rem;
+    background-color: $neutrals-B60;
+}
+
+.notification-counter-container {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: $feedback-error-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 15%;
+    margin-left: 0.5rem;
+}
+
+.notification-text {
+    color: $white-color;
+}
+
+.date-picker-container {
+    border: none;
+    width: 4.5rem;
+    div {
+        visibility: hidden;
+    }
+}
+
+.date-picker-text {
+    position: relative; // Ensure position is relative
+    display: inline-flex; // Use inline-flex for text and icon alignment
+    justify-content: center; // Center content
+    width: 100%; // Take the full width of the button container
+    background: transparent; // Ensure the background is transparent
+    border: none; // Remove border if any
+    color: inherit; // Inherit text color from parent
+    font: inherit; // Inherit font styles from parent
+}
+
+.calendar-container {
+    z-index: 9999;
+}
+// .top-header-container {
+//     position: relative; // Add this line
+//     display: flex;
+//     flex-direction: column;
+// }
+.button-container-notification {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.calendar-wrapper {
+    position: fixed;
+    right: 5%; // instead of left + transform
+    top: 9vh; // or whatever aligns with your header spacing
+    width: 600px;
+    height: 400px;
+}
+
+.cc-breadcrumb {
+    font-size: 0.875rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.cc-breadcrumb-link {
+    color: $neutrals-B300;
+    text-decoration: none;
+    font-family: 'kenvue-sans', sans-serif;
+    font-size: 0.75rem;
+}
+
+.cc-breadcrumb-link:hover {
+    text-decoration: none;
+}
+
+.cc-breadcrumb-separator {
+    margin: 0 0.25rem 0 0;
+    color: $neutrals-B300;
+}
+
+.cc-breadcrumb-active {
+    color: $neutrals-B800;
+    font-size: 0.75rem !important;
+}

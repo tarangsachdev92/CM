@@ -1,0 +1,35 @@
+.cardContainer {
+    width: 172px;
+    text-align: left;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition:
+        background-color 0.3s ease,
+        border 0.3s ease;
+    background-color: #ffffff;
+    border: 1px solid transparent;
+}
+
+.hovered,
+.selected {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--card-border-color);
+}
+
+.flexRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+    gap: 8px;
+}
+
+.title {
+    margin-top: 5px;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 5px;
+    color: black;
+}

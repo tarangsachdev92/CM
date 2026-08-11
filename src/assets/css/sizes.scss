@@ -1,0 +1,49 @@
+.d1-size {
+    font-size: 4.5rem;
+    line-height: 5.5rem;
+}
+
+.d1-size-b {
+    @extend .d1-size;
+    font-weight: bold;
+}
+
+.d2-size {
+    font-size: 4rem;
+    line-height: 5rem;
+}
+
+.d2-size-b {
+    @extend .d2-size;
+    font-weight: bold;
+}
+
+.body-1-size {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.body-1-size-b {
+    @extend .body-1-size;
+    font-weight: bold;
+}
+
+.body-2-size {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.body-2-size-b {
+    @extend .body-2-size;
+    font-weight: bold;
+}
+
+.body-3-size {
+    font-size: 0.75rem;
+    line-height: 1rem;
+}
+
+.body-3-size-b {
+    @extend .body-3-size;
+    font-weight: bold;
+}

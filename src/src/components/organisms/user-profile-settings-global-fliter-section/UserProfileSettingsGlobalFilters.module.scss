@@ -1,0 +1,245 @@
+@import '../../../assets/css/colors.scss';
+@import '../../../assets/css/common.scss';
+
+.flyout-filter-group-label {
+    font-size: small;
+}
+
+.drop-down {
+    font-size: small !important;
+}
+
+.filter-group-title {
+    font-weight: 500;
+}
+.flyout {
+    z-index: 999;
+}
+
+.roleId {
+    font-size: 10px;
+    color: $neutrals-B300;
+}
+
+.table-container {
+    position: relative;
+    min-height: 65vh;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.7);
+    z-index: 50;
+}
+
+.content-disabled {
+    opacity: 1;
+    pointer-events: none;
+}
+
+.am-empty-state {
+    min-height: 65vh;
+}
+
+.am-empty-state-title {
+    color: $neutrals-B300;
+}
+
+.am-empty-state-description {
+    color: $neutrals-B200;
+
+    .am-empty-state-text {
+        color: $primary-green-700-color;
+    }
+}
+
+.outer-container {
+    z-index: 999;
+    position: absolute;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.flyout-labels {
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    color: $neutrals-B800;
+}
+
+.flyout-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+
+.flyout-description {
+    font-weight: 400;
+    color: $neutrals-B200;
+}
+
+.deselectallbtn {
+    border: 1px solid $neutrals-B60;
+    padding: 8px 20px 8px 20px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.deletebtn {
+    border-top: 1px solid $neutrals-B60;
+    border-bottom: 1px solid $neutrals-B60;
+    padding: 8px 20px 8px 20px;
+}
+
+.editselectedbtn {
+    border: 1px solid $neutrals-B60;
+    padding: 8px 20px 8px 20px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.hover-container .icon-buttons {
+    display: none;
+}
+
+.hover-container:hover .icon-buttons {
+    display: flex; /* or inline-flex depending on your layout */
+    gap: 0.5rem;
+}
+.fliter-group-content-warpper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.all-hierarchy-warpper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.filter-group-accordion {
+    background-color: $white-color;
+    margin-top: 10px;
+}
+.user-profile-settings-card {
+    margin-top: 24px;
+}
+.custom-action-container {
+    margin-top: 50px;
+    gap: 150px;
+}
+.header {
+    font-weight: 600;
+}
+.add-filter-group {
+    font-weight: 400;
+    line-height: 20px;
+    color: $primary-green-700-color;
+    cursor: pointer;
+}
+.dropdown-options-custom {
+    position: relative !important;
+}
+.flyoutWrapper {
+    width: 100%;
+}
+.filter-group-title-accordion {
+    font-weight: 100;
+}
+
+.textButtonDisabled {
+    color: $neutrals-B100;
+    cursor: not-allowed;
+}
+
+.applyFilters-buttons-container {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 10px;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.applyFilters-buttons {
+    margin-right: 15px;
+}
+.cancel-container {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding-top: 30px;
+    justify-content: flex-end;
+}
+
+.cancel-buttons {
+    margin-right: 15px;
+    transform: scale(1.1);
+    transform-origin: center;
+    padding-top: 30px;
+}
+
+.info-icon-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.info-text {
+    color: $neutrals-B100;
+    font-size: 12px;
+    margin-left: 10px !important;
+}
+
+.outer-container-hierarchy-dropdown {
+    width: 100% !important;
+}
+
+.no-filtergroup-text {
+    color: $neutrals-B100;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+.dropdown-options-custom {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+}
+
+.toast-configuration {
+    position: fixed !important;
+    top: 50px;
+}
+
+.custom-message {
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    //border-radius: 4px;
+}
+
+.custom-message .info-icon {
+    color: #eb4445 !important;
+    margin-right: 8px;
+    font-size: 35px !important;
+}
+
+.custom-message .message {
+    color: #eb4445 !important;
+    font-size: 12px;
+}

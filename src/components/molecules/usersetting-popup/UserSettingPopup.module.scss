@@ -1,0 +1,155 @@
+@import '../../../assets/css/colors.scss';
+
+.usersetting-popup-container {
+    position: relative;
+    width: 400px;
+    height: 100vh;
+    top: 3.5rem;
+    margin-left: 56px;
+    background-color: $light-blue;
+}
+
+.header {
+    width: 100%;
+    background: $white-color;
+    border-bottom: 0.0625rem solid $neutrals-B40;
+    display: flex;
+    justify-content: space-between;
+    height: 65px;
+}
+
+.header-content {
+    flex-direction: row;
+    width: 352px;
+    display: flex;
+    gap: 12px;
+    padding: 1.5rem;
+}
+
+.header-logo {
+    width: 87.72px;
+    height: 1.5rem;
+    gap: 0.36rem;
+}
+
+.version-text {
+    height: 20px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    padding: 0.125rem 0 0 7.5rem;
+    color: $neutrals-B90;
+}
+
+.close-button {
+    gap: 10px;
+    cursor: pointer;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    bottom: 6vh;
+    border-top: 0.0625rem solid $neutrals-B40;
+    gap: 10px;
+    background-color: $white-color;
+    height: 95px;
+}
+
+.footer-left {
+    width: 254px;
+    padding: 1.5rem;
+    gap: 2px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-right {
+    margin-right: 1rem;
+}
+
+.usersetting-username {
+    width: 100%;
+    height: 28px;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 600;
+    color: $neutrals-B800;
+}
+
+.usersetting-text {
+    width: 100%;
+    height: 20px;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 400;
+    color: $neutrals-B300;
+}
+
+
+.usersetting-card-container {
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    margin: 24px;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    height: calc(100vh - 200px);
+
+    @media (max-height: 750px) {
+        height: 500px;
+        overflow: scroll;
+        scroll-behavior: smooth;
+    }
+}
+
+
+#feedback-flyout {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin-left: 16px;
+    z-index: 1000;
+
+}
+
+.feedback-flyout {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin-left: 16px;
+    z-index: 1000;
+
+}
+
+.usersetting-section-card-container {
+    height: 284px !important;
+}
+
+.usersetting-popup-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 899px !important;
+}
+
+.profile-options {
+    border-radius: 0.5rem;
+    background: $white-color;
+    box-shadow: 0.125rem 0.125rem 0.5rem 0 rgba(0, 0, 0, 0.06);
+    padding: 0.625rem;
+    cursor: pointer;
+    .title {
+        color: $neutrals-B600;
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.25rem;
+    }
+}

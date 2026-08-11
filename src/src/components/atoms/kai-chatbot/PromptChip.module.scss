@@ -1,0 +1,23 @@
+@import '../../../assets/css/colors.scss';
+
+.promptChip {
+    cursor: pointer;
+    font-weight: 400;
+    height: 2rem;
+    padding: 0.25rem 0.75rem 0.25rem 0.75rem;
+    border: 0.1rem dashed $neutrals-B40;
+    border-radius: 0.5rem ;
+    font-size: 0.75rem ;
+    color: $neutrals-B500;
+    background-color: $white-color;
+    line-height: 1.25rem ;
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+
+    &:hover {
+        background: $primary-green-50-color;
+        border-color: $primary-green-200-color;
+    }
+  
+}

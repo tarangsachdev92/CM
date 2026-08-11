@@ -1,0 +1,47 @@
+@import '../../../assets/css/colors.scss';
+
+.main-card {
+    padding: 24px;
+    border: 1.5px solid $neutrals-B30;
+    border-radius: 12px;
+    background: linear-gradient(
+        112.32deg,
+        $background-color-white-gradient 0%,
+        $background-color-grey-gradient 101.12%
+    );
+    box-shadow: 2px 2px 8px 0px $box-shadow-black-color;
+    overflow: hidden;
+
+    &.clickable {
+        cursor: pointer;
+    }
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    text-align: left;
+    color: $neutrals-B800;
+}
+
+.card-label {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    color: $neutrals-B200;
+}
+
+.card-head-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-prelabel {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 4px;
+}

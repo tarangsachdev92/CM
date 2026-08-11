@@ -1,0 +1,65 @@
+@import '../../../../assets/css/colors.scss';
+@import '../../../../assets/css/common.scss';
+
+
+.rule-condition-card-container{
+    padding: 0.9rem;
+    border:1px solid $neutrals-B40;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    padding-top: 0.5rem;      
+}
+
+.card-title-names{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.card-title-names .title-heading{
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-left: 0.5rem;
+}
+
+.card-title-names .title-subheading{
+    font-size: 0.7rem;
+    font-weight: 400;  
+    margin-left: 0.5rem;  
+    color: $neutrals-B100;
+}
+
+.radio-subheading{
+    font-size: 0.8rem;
+    font-weight: 400;      
+    color: $neutrals-B100;
+    margin-bottom: 0.8rem;
+}
+
+
+.rule-condition-card-add-link{
+    color: $primary-green-700-color !important;    
+    font-family: 'kenvue-sans', sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    line-height: 20px;
+    letter-spacing: 0px;
+    padding-left: 0px;
+
+    &:hover {
+        color: $primary-green-700-color !important;      
+        text-decoration: underline;
+    }
+    &:focus,
+    &.ant-input-focused {
+      color: $primary-green-700-color !important;      
+        text-decoration: underline;
+
+    }
+
+    &:disabled{
+        color: $neutrals-B100 !important;
+    }
+}

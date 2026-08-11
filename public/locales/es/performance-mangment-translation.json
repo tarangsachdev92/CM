@@ -1,0 +1,24 @@
+{
+    "performacemng.title": "Gestión del desempeño",
+    "performacemng.subtitle":"Seleccione el nivel de evaluación del desempeño",
+    "performacemng.favorites":"Mis favoritos",
+    "performacemng.favoritespara":"No se han añadido favoritos todavía. Toque el icono del corazón junto al nombre del informe o la geografía del informe para añadir informes aquí y acceder más rápido.",
+    "performacemng.global":"Global",
+    "performacemng.region":"Región",
+    "performacemng.cluster":"Clúster",
+    "performacemng.market":"Mercado",
+    "performacemng.site":"Sitio",
+    "performacemng.chooseTime":"Elegir período de tiempo",
+    "performacemng.noMatchesFound":"No se encontraron coincidencias",
+    "performacemng.sorryNothingMatchesRecords":"Lo sentimos, su búsqueda no tiene coincidencias. Por favor, intente con otro término.",
+    "performacemng.notTagged":"No está etiquetado en ningún informe para el filtro seleccionado. Solicite acceso para ver los informes relevantes.",
+    "performacemng.searchResults":"Resultados de la búsqueda",
+    "performacemng.reportsAccess":"Informes a los que tiene acceso",
+    "performacemng.reportsOutsideAccess":"Informes fuera de su acceso",
+    "performacemng.noReportsOutsideAccess":"No hay informes fuera de su acceso para los filtros seleccionados",
+    "kpi.userRoleSettings": "Configuración de roles de usuario",
+    "kpi.addPrAndSecRole": "Agrega roles primarios y secundarios para comenzar a seguir los KPI’s relevantes para ti",
+    "kpi.noRoleSetup":"Sin configuración de roles",
+    "kpi.goto":"Ir a"
+    
+}

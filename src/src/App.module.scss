@@ -1,0 +1,42 @@
+@import './assets/css/colors.scss';
+@import './assets/css/fonts.scss';
+
+html body {
+    margin: 0;
+    overflow-x: hidden;
+}
+.footer {
+    margin-left: 56px;
+    width: calc(100% - 56px);
+    margin-top: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.root {
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    overflow-x: hidden;
+    min-height: 100vh;
+    background-color: $white-color;
+    font-family: 'Kenvue-sans', sans-serif;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow-x: hidden;
+    margin-left: 56px;
+    width: calc(100% - 56px);
+    background-color: $light-blue;
+}
+
+.content {
+    margin: 1.5rem;
+}
+
+.fixedToastMargin {
+    margin : 10px 65px 0px 31px
+}

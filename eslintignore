@@ -1,0 +1,9 @@
+# production
+
+node*modules
+dist
+/build
+/node_modules
+/dist
+*.css
+\*.svg

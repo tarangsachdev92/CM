@@ -1,0 +1,127 @@
+.container {
+    width: 260px;
+    padding: 16px;
+    border-right: 1px solid #eee;
+    font-family: sans-serif;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.subtitle {
+    font-weight: 400;
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 12px;
+}
+
+.label {
+    font-weight: 400;
+    font-size: 12px;
+    color: #0D0D0D;
+}
+
+.searchBox {
+    margin-bottom: 12px;
+
+    input {
+        width: 100%;
+        padding: 8px 12px;
+        border-radius: 20px;
+        border: 1px solid #ddd;
+        outline: none;
+
+        &:focus {
+            border-color: #2e7d6b;
+        }
+    }
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.menuContainer {
+    width: 10px;
+}
+
+.itemSubContainer {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    padding: 8px;
+    border-radius: 6px;
+    cursor: grab;
+    transition: background 0.2s ease;
+    border-width: 0px;
+    background-color: transparent;
+}
+
+.itemSubContainer :active {
+    cursor: grabbing;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: grab;
+    transition: background 0.2s ease;
+    border-width: 0px;
+    background-color: transparent;
+    width: 100%;
+    &:hover {
+        border: 1px solid #33C0AC;
+        background-color: #F3FAF9;
+    }
+
+    &:hover .dotBtn {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+    }
+}
+
+.item:active {
+    cursor: grabbing
+}
+
+
+.dotBtn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #2e7d6b;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(6px);
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        color: #1b5e54;
+    }
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+
+    svg {
+        width: 16px;
+        height: 16px;
+        color: #888;
+    }
+}

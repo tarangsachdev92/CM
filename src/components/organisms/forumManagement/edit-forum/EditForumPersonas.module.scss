@@ -1,0 +1,26 @@
+@import '../../../../assets/css/colors.scss';
+
+.personaCard {
+    border: 0.0625rem solid $neutrals-B40;
+    border-radius: 0.75rem;
+    padding: 1rem;    
+    min-height: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;    
+    cursor: pointer;
+
+    h4 {
+        margin: 0 0 0.5rem 0;
+        font-size: 1rem;
+        font-weight: 600;
+        color: $neutrals-B800;
+    }
+
+    p {
+        margin: 0;
+        font-size: 0.8125rem;
+        color: $neutrals-B400;
+        line-height: 1.4;
+    }   
+}

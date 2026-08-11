@@ -1,0 +1,47 @@
+@import '../../../assets/css/colors.scss';
+
+.rm-container {
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid $neutrals-B30;
+    background-color: $white-color;
+}
+
+.rm-card-title {
+    color: $neutrals-B800;
+}
+
+.rm-card-description {
+    color: $neutrals-B200;
+}
+
+.search-box {
+    width: 400px;
+    justify-items: right;
+    z-index: 9999;
+}
+
+.search-box-container{
+    right: 0px !important;
+}
+.overlay {
+  position: absolute;
+  inset: 0;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.7);
+  z-index:350;
+}
+
+.table-inner {
+  position: relative;
+  min-height: 400px; // ensures loader has space to center
+  background-color: $white-color;
+}
+.moveDialog {
+
+    height: 200px;
+}

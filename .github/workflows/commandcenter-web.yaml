@@ -1,0 +1,20 @@
+name: commandcenter-web
+on:
+  workflow_dispatch: {}
+  push:
+    branches:
+      - github-cicd
+      - development
+      - qa
+      - uat
+jobs:
+  ci:
+    uses: KENVUE-DEVEX/Katalyst-Workflow-Library/.github/workflows/katalyst-npm-ci.yaml@v1
+    secrets: inherit
+
+  cd:
+    needs: ci
+    uses: KENVUE-DEVEX/Katalyst-Workflow-Library/.github/workflows/katalyst-azure-webapp-cd.yaml@v1
+    with:
+      ZIP_FILE_PATH: ${{ needs.ci.outputs.ZIP_FILE_PATH }}
+    secrets: inherit

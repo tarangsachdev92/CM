@@ -1,0 +1,29 @@
+@import '../../../assets/css/colors.scss';
+@import '../../../assets/css/common.scss';
+
+.outer-container {
+    z-index: 999;
+    position: absolute;
+}
+
+.outer-container-dropdown{
+    width: 100%;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader-section {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  z-index: 10; 
+}

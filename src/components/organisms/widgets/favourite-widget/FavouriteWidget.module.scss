@@ -1,0 +1,405 @@
+@import '../../../../assets/css/colors.scss';
+@import '../../../../assets/css/fonts.scss';
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+
+    padding: 20px;
+
+    background: $white-color;
+
+    box-sizing: border-box;
+
+    border: 1px solid transparent;
+    border-radius: 8px;
+
+    transition: all 0.2s ease;
+}
+
+/* ===========================
+   Header
+=========================== */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 12px;
+}
+
+.heading {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+
+    color: $neutrals-B800;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    opacity: 0;
+
+    transition: opacity 0.2s ease;
+}
+
+.container:hover .actions {
+    opacity: 1;
+}
+
+.actionsEditMode {
+    opacity: 1 !important;
+}
+
+.minusWrapper {
+    position: absolute;
+
+    top: 4px;
+    left: 30px;
+
+    z-index: 10;
+}
+
+.minusWrapper svg {
+    width: 8px !important;
+    height: 8px !important;
+}
+
+/* ===========================
+   Content
+=========================== */
+
+.carouselContent {
+    flex: 1;
+
+    min-height: 0;
+}
+
+.loaderContainer {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 200px;
+}
+
+:global(.slick-list) {
+    overflow: hidden !important;
+}
+
+:global(.slick-track) {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 122px);
+
+    width: fit-content;
+
+    margin: 0 auto;
+
+    column-gap: 0;
+    row-gap: 0;
+}
+
+/* ===========================
+   Card
+=========================== */
+
+.card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 122px;
+    height: 104px;
+
+    padding: 16px;
+
+    gap: 12px;
+
+    background: $white-color;
+
+    border: 1px solid transparent;
+
+    border-radius: 8px;
+
+    box-sizing: border-box;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.card:hover:not(.cardEditable) {
+    border-color: $neutrals-B30;
+
+    box-shadow: 2px 2px 8px $box-shadow-black-color;
+
+    background: $white-color;
+
+    z-index: 2;
+}
+
+.cardEditable {
+    background: $white-color;
+}
+
+.initials {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 20px;
+
+    text-align: center;
+
+    color: inherit;
+}
+
+.name {
+    width: 94px;
+
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+
+    text-align: center;
+
+    color: $neutrals-B600;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.emptyState {
+    flex: 1;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    padding: 0;
+
+    min-height: 104px;
+
+    height: 100%;
+}
+
+.emptyStateImage {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 104px;
+    height: 104px;
+
+    flex-shrink: 0;
+}
+
+.emptyStateImage svg {
+    width: 99px;
+    height: 77.09px;
+}
+
+.emptyStateText {
+    width: 263px;
+    max-width: 263px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: flex-start;
+
+    gap: 12px;
+}
+
+.emptyStateText h3 {
+    margin: 0;
+
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 20px;
+
+    color: $neutrals-B800;
+}
+
+.emptyStateText p {
+    margin: 0;
+
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+
+    text-align: left;
+
+    color: $neutrals-B300;
+}
+
+.guestEmptyTitle {
+    margin: 0;
+
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 20px;
+
+    color: $neutrals-B800;
+}
+
+.guestEmptyDescription {
+    margin: 0;
+
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+
+    text-align: left;
+
+    color: $neutrals-B300;
+}
+
+.libraryLink {
+    color: $primary-green-color;
+
+    text-decoration: underline;
+
+    cursor: pointer;
+}
+
+.carouselFooter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 4px;
+
+    margin-top: 4px;
+}
+
+.footerArrow {
+    width: 24px;
+    height: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+
+    border: none;
+
+    color: $primary-green-500-color;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    &:disabled {
+        color: $neutrals-B40;
+        cursor: not-allowed;
+    }
+}
+
+.dots {
+    display: flex;
+    align-items: center;
+
+    gap: 4px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: $primary-green-100-color;
+
+    cursor: pointer;
+}
+
+.activeDot {
+    width: 8px;
+    height: 8px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: $primary-green-500-color;
+
+    cursor: pointer;
+}
+
+:global(.chart-type-button).teal-button,
+:global(.chart-type-button).teal-button:hover {
+    width: 40px !important;
+    height: 40px !important;
+
+    color: $primary-green-color;
+
+    background: $primary-green-50-color !important;
+
+    border: 1px solid $neutrals-B30 !important;
+
+    border-radius: 8px;
+
+    box-shadow: none !important;
+}
+
+:global(.chart-type-button).purple-button,
+:global(.chart-type-button).purple-button:hover {
+    width: 40px !important;
+    height: 40px !important;
+
+    color: $secondary-purple-800-color;
+
+    background: $secondary-purple-100-color !important;
+
+    border: 1px solid $neutrals-B30 !important;
+
+    border-radius: 8px;
+
+    box-shadow: none !important;
+}
+
+.cardEditable :global(.chart-type-button).teal-button,
+.cardEditable :global(.chart-type-button).teal-button:hover {
+    background: $primary-green-50-color !important;
+
+    border: 1px dashed $primary-green-200-color !important;
+
+    box-shadow: none !important;
+}
+
+.cardEditable :global(.chart-type-button).purple-button,
+.cardEditable :global(.chart-type-button).purple-button:hover {
+    background: $secondary-purple-100-color !important;
+
+    border: 1px dashed $secondary-purple-400-color !important;
+
+    box-shadow: none !important;
+}

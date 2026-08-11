@@ -1,0 +1,70 @@
+application_integration:
+  #Disable_CD: "false"
+  #Deploy_Custom_Artifact: "False"
+  #Enable_Semantic_Versioning: "True"
+  dockerImage: "ts-docker.artifactrepo.kenvue.com/ts-docker/node-buildagent:22.22"
+  teamsWebhook: ""
+  #ARTIFACTORY_CREDENTIALS: 'katalyst-jfrog-login'
+  #BRANCHING_STRATEGY: "gitflow"
+  PUBLISH_FEATURE_ARTIFACTS: "true"
+  buildType: "package"
+  Enable_Jfrog: "false"
+  USE_NPMRC: "true"
+  USE_APP_NPMRC_FILE: "true"
+  USE_BUILD_ENV_FILE: "true"
+
+application_deployment:
+  dev:
+    DEPLOY_LIB_BRANCH_NAME: 'development'
+    # ZIP_FILE_NAME: "node_modules-and-build"
+    ZIP_FILE_NAME: "node_package"
+    DEPLOY_LIB_SOURCE_DIR_PATH: "home/site/wwwroot/"
+    #ZIP_NAME: node_modules-and-build
+    APP_NAME: app-DTO-CommandCenter-web-dev
+    TARGET_PATH: home/site/wwwroot/
+    RESOURCE_GROUP: AZR-WDZ-Appservice-Development                   
+    SUBSCRIPTION: AZR-WDZ
+    # WEB_APP_DEPLOY_METHOD: KUDU_ZIP_DEPLOY # "KUDU_ZIP_DEPLOY" or "AZURE_CLI"
+    WEB_APP_DEPLOY_METHOD: AZURE_CLI
+    CLEAN_DEPLOY: "false"   # append — keeps existing files, only adds/overwrites new ones
+    # CLEAN_DEPLOY: "true"  # default — deletes all existing files before deploying
+    #DEPLOY_LIB_IMAGE_TAG: 'v1.2.3'
+  qa:
+    DEPLOY_LIB_BRANCH_NAME: 'qa'
+    # ZIP_FILE_NAME: "node_modules-and-build"
+    ZIP_FILE_NAME: "node_package"
+    DEPLOY_LIB_SOURCE_DIR_PATH: "home/site/wwwroot/"
+    #ZIP_NAME: node_modules-and-build
+    APP_NAME: app-DTO-CommandCenter-web-qa
+    TARGET_PATH: home/site/wwwroot                 
+    RESOURCE_GROUP: AZR-WEP-Appservice-QA                  
+    SUBSCRIPTION: AZR-WEP
+    #DEPLOY_LIB_IMAGE_TAG: 'v1.2.3'
+    WEB_APP_DEPLOY_METHOD: AZURE_CLI
+    CLEAN_DEPLOY: "false"   # append — keeps existing files, only adds/overwrites new ones
+  uat:
+    DEPLOY_LIB_BRANCH_NAME: 'uat'
+    # ZIP_FILE_NAME: "node_modules-and-build"
+    ZIP_FILE_NAME: "node_package"
+    DEPLOY_LIB_SOURCE_DIR_PATH: "home/site/wwwroot/"
+    #ZIP_NAME: node_modules-and-build
+    APP_NAME: app-DTO-CommandCenter-web-uat
+    TARGET_PATH: home/site/wwwroot/                
+    RESOURCE_GROUP: AZR-WEP-Appservice-QA                   
+    SUBSCRIPTION: AZR-WEP
+    #DEPLOY_LIB_IMAGE_TAG: 'v1.2.3'
+    WEB_APP_DEPLOY_METHOD: AZURE_CLI
+    CLEAN_DEPLOY: "false"   # append — keeps existing files, only adds/overwrites new ones
+  prod:
+    DEPLOY_LIB_BRANCH_NAME: 'main'
+    # ZIP_FILE_NAME: "node_modules-and-build"
+    ZIP_FILE_NAME: "node_package"
+    DEPLOY_LIB_SOURCE_DIR_PATH: "home/site/wwwroot/"
+    #ZIP_NAME: node_modules-and-build
+    APP_NAME: app-DTO-CommandCenter-web-prod
+    TARGET_PATH: home/site/wwwroot               
+    RESOURCE_GROUP: AZR-WEH-Appservice-production                
+    SUBSCRIPTION: AZR-WEH
+    #DEPLOY_LIB_IMAGE_TAG: 'v1.2.3'
+    WEB_APP_DEPLOY_METHOD: AZURE_CLI
+    CLEAN_DEPLOY: "false"   # append — keeps existing files, only adds/overwrites new ones

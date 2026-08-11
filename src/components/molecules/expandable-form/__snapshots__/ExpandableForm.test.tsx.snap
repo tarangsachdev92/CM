@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ExpandableForm /> renders expandable form correctly 1`] = `
+<div
+  className="content-container "
+>
+  <div
+    className="content-title-container "
+  >
+    <div
+      className="content-title-left-container"
+    >
+      <Label
+        type="body2"
+      >
+        <span
+          className="content-title"
+        >
+          Test Title
+        </span>
+      </Label>
+      <div
+        className="space-v-8"
+      />
+      <Label
+        type="body3"
+      >
+        <span
+          className="content-title-description"
+        >
+          Test Description
+        </span>
+      </Label>
+    </div>
+    <div
+      className="content-title-right-container"
+    >
+      <Flex
+        gap="8px"
+      />
+    </div>
+  </div>
+  <div
+    className="content-body-container content-body-container-opened "
+  >
+    <div />
+  </div>
+</div>
+`;

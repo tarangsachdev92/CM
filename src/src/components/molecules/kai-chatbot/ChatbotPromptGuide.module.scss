@@ -1,0 +1,94 @@
+@import '../../../assets/css/colors.scss';
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.55);
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.6s ease;
+  z-index: 999;
+  overflow:hidden;
+  left: 0;
+}
+
+.mainContainer {
+  width: fit-content;
+  position: absolute;
+  background-color: $white-color;
+  height: 80%;
+  max-height: calc(100% - 2rem);
+  padding: 1.5rem;
+  border-radius: 12px;
+  z-index: 9999;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  gap: 0.2rem;
+  align-items: center;
+}
+
+.headerContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1.25px;
+}
+
+.headerTitle {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #0D0D0D;
+  font-weight: 600;
+}
+
+.content-container-selected {
+  display: flex;
+  flex: 1;
+  background-color: $white-color;
+  border: 1px solid $primary-green-500-color;
+  border-radius: 0.75rem;
+  padding: 0.937rem;
+  flex-direction: column;
+  margin-top: 0.5rem;
+  width: 93%;
+}
+
+.content-container-deselected {
+  display: flex;
+  flex: 1;
+  margin-top: 0.5rem;
+  width: 93%;
+  background-color: $white-color;
+  border: 1px solid $neutrals-B40;
+  border-radius: 0.75rem;
+  padding: 0.937rem;
+  flex-direction: column;
+  height: 1.4rem;
+}
+
+.guidelineRow {
+  background-color: $neutrals-B20;
+  border-radius: 0.5rem;
+  padding-inline: 0.5rem;
+  padding-block: 1rem;
+  display: flex;
+  align-items: center;
+  gap:0.5rem
+}
+
+.customTitleStyle {
+  color: $neutrals-B800;
+  font-weight: 400;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

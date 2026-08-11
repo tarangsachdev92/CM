@@ -1,0 +1,45 @@
+@import '../../../assets/css/colors.scss';
+.card-children-content-header {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+.todo-card-children {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+.card-children-content-text {
+    text-align: center;
+    color: $neutrals-B300;
+}
+.card-children-content-text-anchor {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+    color: $primary-green-700-color;
+    cursor: pointer;
+    // Following CSS code is to create text-only button
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+.card-head-wrapper {
+    padding: 0;
+    margin-top: -100px;
+}
+.minor-empty-state {
+    display: flex;
+    align-items: center;
+}
+.initial-loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}

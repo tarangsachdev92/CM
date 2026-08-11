@@ -1,0 +1,41 @@
+@import '../../../assets/css/colors.scss';
+@import '../../../assets/css/common.scss';
+
+.navbar {
+    margin-bottom: 24px;
+    border: 1px solid $neutrals-B30;
+    border-radius: 100px;
+    padding: 12px 24px 12px 16px;
+    background-color: $white-color;
+}
+
+.navbar-username {
+    font-size: 24px;
+    line-height: 32px;
+    color: $neutrals-B800;
+}
+
+.navbar-userrole {
+    color: $neutrals-B200;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+a.inactive {
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $neutrals-B500;
+}
+
+a.active {
+    @extend .inactive;
+    font-weight: 600;
+    color: $primary-green-700-color;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}

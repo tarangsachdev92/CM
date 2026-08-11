@@ -1,0 +1,2 @@
+export const DESCRPKEYASSMHIGLIGHT =
+    'Performance highlights for Jun 2024 cycle will appear here.\nThis will be a free text field, an assigned user only will have the authority to update and edit the text here.Detailed information and summary for each KPI will be accessible by clicking on a KPI card and scrolling down to view more information.This will help users to understand what is going well and what isn’t thus saving time for each user to instead go through the entire analysis for each dimension.';

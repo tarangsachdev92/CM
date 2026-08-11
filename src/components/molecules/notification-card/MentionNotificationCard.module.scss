@@ -1,0 +1,131 @@
+
+
+@import "../../../assets/css/colors.scss";
+@import "../../../assets/css/common.scss";
+@import "../../../assets/css/fonts.scss";
+
+.notification-card-sub-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 !important;
+  width: auto !important;
+  font-family: "kenvue-Sans", sans-serif;
+}
+
+.notification-card-header {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+.notification-card-avatar-container {
+  position: relative;
+}
+
+.notification-card-avatar {
+  border-radius: 50% !important;
+  object-fit: cover;
+}
+
+.username-initials-small {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $avatar-background-color;
+  border: 2px solid $secondary-coral-100-color;
+  color: $avatar-title-color;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.notification-card-title-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.notification-card-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: $neutrals-B800 !important;
+}
+
+.notification-card-subtitle {
+  font-size: 10px;
+  font-weight: 400;
+  color: $neutrals-B100;
+}
+
+.notification-card-body {
+  border: 1px solid $neutrals-B40;
+  border-radius: 8px;
+  background: $white-color;
+  padding: 12px;
+}
+
+.mention-comment {
+  font-size: 14px;
+  line-height: 20px;
+  color: $neutrals-B800;
+  word-break: break-word;
+}
+
+.notification-card-header-action-buttons {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-left: auto;
+}
+
+.iso-card-expand-icon {
+    padding-top: 7% !important;
+}
+
+.iso-card-expand-icon,
+.iso-card-expand-icon {
+    width: 10px !important;
+    height: 10px !important;
+    cursor: pointer;
+}
+
+.notification-card-container {
+  &:hover {
+    .notification-card-header-action-buttons {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.notification-card-header-action-buttons {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-left: auto;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.notification-card-container{
+  max-width: 600px !important;
+    width: auto !important;
+    margin: 2% !important;
+    margin-right: 4% !important;
+    :global(.ant-card-body) {
+    padding: 14px !important;
+    }
+}
+
+
+.tagged-user {
+    color: #2e7d32;
+    font-weight: 600;
+}
+
+

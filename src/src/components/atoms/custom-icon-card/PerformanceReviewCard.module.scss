@@ -1,0 +1,128 @@
+@import '../../../assets/css/colors.scss';
+.card {
+    width: 350px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    position: relative;
+    background-color: white;
+    cursor: default;
+
+    &.disabled {
+        background-color: #ebebeb;
+    }
+
+    &.clickable {
+        cursor: pointer;
+    }
+}
+
+.heartIcon {
+    position: absolute;
+    top: 25px;
+    right: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #999;
+
+    &.liked {
+        color: #ff6b6b;
+    }
+}
+
+.avatar {
+    background-color: #f1ebfb;
+    color: #9686ac;
+    font-weight: bold;
+    font-size: 16px;
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.disabled {
+        background-color: #dedede;
+        color: #666666;
+    }
+}
+
+.title {
+    margin: 0;
+
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.buttons {
+    margin-top: 12px;
+    display: flex;
+    gap: 6px;
+    flex-wrap: nowrap; /* default: no wrap for first 3 buttons */
+    justify-content: flex-start;
+}
+
+.expanded {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 buttons per row */
+    gap: 8px;
+}
+
+.button {
+    display: flex;
+    max-width: 100px;
+    align-items: center;
+    gap: 6px;
+    color: #00a676; // primaryGreenColor
+
+    &:hover {
+        border-color: #00a676;
+        background-color: #e6f4ea; // primaryGreen50Color
+    }
+}
+
+.button:hover .geographyText {
+    color: $primary-green-900-color;
+}
+
+.button:hover span {
+    color: $primary-green-900-color;
+}
+.description {
+    margin-top: 12px;
+}
+
+.viewToggle {
+    margin-top: 12px;
+    text-align: center;
+
+    a {
+        color: black;
+        cursor: pointer;
+    }
+}
+.geographyText {
+    max-width: 50px;    
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.heartIconButton {
+    margin-left: 0.5rem;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+}
+
+.heartIconButton:hover {
+    color: $primary-green-900-color;
+}

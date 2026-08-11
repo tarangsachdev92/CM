@@ -1,0 +1,151 @@
+@import '../../../../assets/css/colors.scss';
+@import '../../../../assets/css/fonts.scss';
+@import '../../../../assets/css/common.scss';
+
+
+.table-header-container{
+    padding:1.25rem 1.5rem 1.25rem 1.25rem;
+    position: relative;    
+}
+
+.drill-down-buttons{
+    border-radius: 0 !important;
+    width: 3rem;
+    padding-left: 1rem !important;    
+}
+
+.table-header-title {
+    font-weight: 600;
+    font-style: Semibold;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    letter-spacing: 0px;
+
+}
+
+.table-header-applied-filters{    
+font-weight: 400;
+font-size: 0.75rem;
+letter-spacing: 0px;
+color: $neutrals-B300;
+margin-top: 0.5rem;
+}
+
+.table-header-subtitle{
+font-weight: 400;
+font-size: 0.75rem;
+letter-spacing: 0px;
+color: $neutrals-B400;
+
+}
+
+.perf-indicators{
+    margin-top: 1rem;
+    margin-bottom: 0.6rem;
+}
+
+.table-header-action-button{    
+    border-radius: 0 !important;
+    border-top-left-radius: 0.3rem !important;
+    border-bottom-left-radius: 0.3rem !important;    
+    position: absolute;    
+    right: 0rem;
+    padding-left: 0.5rem !important;    
+    padding-right: .5rem !important;   
+    border-color: $secondary-blue-300-color !important;
+    background-color: $graph-blue-4-color !important;
+    width: 2rem !important;  
+}
+
+
+
+.table-header-action-button-container {
+  position: absolute;
+  right: 0.75rem;
+  top: -3%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 0.375rem;
+  padding: 0.375rem 0.625rem;
+  background: #ffffff;
+  border-radius: 999px;
+  box-shadow: 0 0.375rem 1rem rgba(0, 0, 0, 0.12);
+  z-index: 2;
+}
+
+.action-btn {
+  width: 1.75rem;
+  height: 1.75rem;
+  border: none;
+  background: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+.action-btn:hover {
+  background: #f0f0f0;
+}
+
+.kpi-wrapper {
+  display: inline-flex;
+  align-items: center;
+}
+
+.kpi-dot {
+  color: #9AA0A6;
+  margin: 0 0.1875rem; 
+}
+
+.kpi-text {
+  gap: 0.8rem;
+  color: $neutrals-B300;
+  font-weight: 500;
+}
+
+.kpi-actual {
+  color: #3A7D34;
+  font-weight: bold;
+  font-size: 0.9375rem; 
+  margin-right: -0.25rem; 
+  margin-left: 0.5rem !important;
+}
+
+.kpi-target {
+  display: inline-flex;
+  align-items: center;
+  margin-left: -0.125rem; 
+  margin: 0 !important;
+}
+
+.kpi-value {
+  display: inline-block;
+  color: #3A7D34;
+  font-weight: bold;
+  font-size: 0.8125rem; 
+  margin-right: -0.25rem;
+}
+
+.kpi-label {
+  display: inline-block;
+  color: $neutrals-B300;
+  margin-right: -0.25rem; 
+}
+
+.kpi-target {
+  gap: 0.5rem !important;
+  color: $neutrals-B300;
+}
+
+.kpi-target-icon {
+  margin-top: 0.375rem; 
+}
+
+.kpi-target-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+}
+
+
+

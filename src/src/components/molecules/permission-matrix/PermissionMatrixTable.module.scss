@@ -1,0 +1,48 @@
+@import '../../../assets/css/colors.scss';
+@import '../../../assets/css/fonts.scss';
+.tableWrapper {
+    position: relative;
+}
+
+.emptyOverlay {
+    position: absolute;
+    top: 0px;
+    left: 520px;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    pointer-events: none;
+
+    background-color: transparent;
+}
+
+.emptyState {
+    text-align: center;
+}
+
+.emptyTitle {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.emptySubTitle {
+    font-size: 14px;
+    color: #6b7280;
+}
+.emptyPersonaMode :global(tbody tr td:nth-child(n + 3)) {
+    border: none !important;
+    background-color: transparent !important;
+}
+.emptyPersonaMode :global(thead tr th:nth-child(n + 3)) {
+    border: none !important;
+    background-color: transparent !important;
+}
+.moduleId {
+    font-size: 12px;
+    color: $neutrals-B300;
+}

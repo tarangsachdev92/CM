@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RoleManagementTitle /> should role management title section 1`] = `
+<Flex
+  gap={24}
+  vertical={true}
+>
+  <Flex
+    className="role-management-title"
+    gap={8}
+    vertical={true}
+  >
+    <Flex
+      align="center"
+      gap={8}
+      justify="space-between"
+    >
+      <Flex
+        align="flex-start"
+        gap={16}
+      >
+        <div
+          className="header-back-button"
+        >
+          <Component
+            to="/admin-hub"
+          >
+            <svg
+              fill="none"
+              height={12}
+              viewBox="0 0 8 14"
+              width={8}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clipRule="evenodd"
+                d="M7.70711 0.292893C8.09763 0.683417 8.09763 1.31658 7.70711 1.70711L2.41421 7L7.70711 12.2929C8.09763 12.6834 8.09763 13.3166 7.70711 13.7071C7.31658 14.0976 6.68342 14.0976 6.29289 13.7071L0.292893 7.70711C-0.0976311 7.31658 -0.0976311 6.68342 0.292893 6.29289L6.29289 0.292893C6.68342 -0.0976311 7.31658 -0.0976311 7.70711 0.292893Z"
+                fill="#0D0D0D"
+                fillRule="evenodd"
+              />
+            </svg>
+          </Component>
+        </div>
+        <Flex
+          gap={8}
+          justify="flex-start"
+          vertical={true}
+        >
+          <Label
+            type="h2"
+          >
+            <span
+              className="role-management-heading"
+            >
+              Role Management
+            </span>
+          </Label>
+          <Label
+            type="body2"
+          >
+            <span
+              className="role-management-description"
+            >
+              Control access for all roles here
+            </span>
+          </Label>
+        </Flex>
+      </Flex>
+      <Flex
+        className="add-role-button-container"
+      >
+        <AnimatedButton
+          icon="plus"
+          id="role-management-add-role-button"
+          onClick={[Function]}
+          size="M"
+          text="Add New Role"
+        />
+      </Flex>
+    </Flex>
+    <Flex
+      className="tabs-wrapper"
+    >
+      <Tab
+        items={
+          [
+            {
+              "icon": "users-01",
+              "label": "Role Management",
+            },
+            {
+              "icon": "users-check",
+              "isDisabledTab": true,
+              "label": "User Management",
+            },
+          ]
+        }
+        onClick={[Function]}
+      />
+    </Flex>
+  </Flex>
+  <div>
+    <RoleManagementTable />
+  </div>
+</Flex>
+`;

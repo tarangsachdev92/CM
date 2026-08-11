@@ -1,0 +1,166 @@
+@import '../../../assets/css/colors.scss';
+@import '../../../assets/css/fonts.scss';
+
+.role-container {
+    border: 0.0625rem solid $neutrals-B40; // 1px
+    background: $white-color;
+    border-radius: 0.5rem; // 8px
+    padding: 1rem; // 16px
+    margin: 1rem 0rem 0rem 0rem; // 16px
+    cursor: pointer;
+    height: 3.5rem; // 56px
+}
+
+.role-container-new {
+    border: 0.0625rem solid $neutrals-B40;
+    background: $white-color;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 1rem 0rem 0rem 0rem;
+    cursor: pointer;
+}
+
+.role-request-typography {
+    font-size: $font-size-12;
+    font-weight: 400;
+    line-height: 1.25rem; // 20px
+    font-family: 'kenvue-sans', sans-serif;
+}
+
+.role-request-approved-text {
+    @extend .role-request-typography;
+    color: $neutrals-B600;
+    font-size: $font-size-14;
+}
+
+.role-request-unapproved-disabled-text {
+    @extend .role-request-typography;
+    color: $neutrals-B100;
+    font-size: $font-size-14;
+}
+
+.access-requested-badge {
+    @extend .role-request-typography;
+    border-radius: 31.25rem; // 500px
+    border: 0.03125rem solid $secondary-yellow-500-color; // 0.5px
+    padding: 0.375rem 0.75rem 0.375rem 0.75rem; // 6px 12px
+    gap: 0.375rem; // 6px
+    opacity: 0;
+    background: rgba(253, 248, 229, 1);
+    color: rgba(173, 133, 0, 1);
+}
+
+.cancel-request-text {
+    @extend .role-request-typography;
+    color: $neutrals-B800;
+}
+
+.delegated-role-timestamp {
+    @extend .role-request-typography;
+    padding: 0.375rem 0.75rem; // 6px 12px
+    border-radius: 31.25rem; // 500px
+    background: $secondary-purple-50-color;
+    border: 0.03125rem solid $secondary-purple-color; // 0.5px
+    color: $secondary-purple-800-color;
+}
+
+.delegated-role-avatar {
+    background: $primary-green-400-color;
+    font-weight: 600;
+    font-size: $font-size-10 !important;
+    line-height: 1rem; // 16px
+    color: $white-color;
+}
+
+.delegated-role-avatar-text-content {
+    @extend .role-request-typography;
+    color: $neutrals-B600;
+}
+
+.delegated-role-view-permissions-text {
+    @extend .role-request-typography;
+    text-decoration: underline;
+    text-underline-offset: 0.1875rem; // 3px
+    color: $primary-green-700-color;
+}
+
+.vertical-divider {
+    height: 1.125rem; // 18px
+    border-color: $neutrals-B600;
+    margin-inline: 0rem;
+}
+
+.role-trash-icon-hide {
+    display: none;
+}
+
+.role-trash-icon-show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $white-color;
+    padding: 0.5rem; // 8px
+    width: 1.25rem; // 20px
+    height: 1.25rem; // 20px
+}
+
+.edit-icon-hide {
+    display: none;
+}
+
+.edit-icon-show {
+    display: flex;
+}
+
+.status-chip-button-typography {
+    font-weight: 400;
+    font-size: $font-size-14;
+    line-height: 1.25rem; // 20px
+    letter-spacing: 0;
+    color: $neutrals-B600;
+}
+
+.status-chip-button {
+    @extend .status-chip-button-typography;
+    display: block;
+    position: absolute;
+    margin-top: 2.625rem; // 42px
+    border-radius: 0.5rem; // 8px
+    padding: 0.75rem; // 12px
+    gap: 0.25rem; // 4px
+    background-color: $white-color;
+    border: 0.0625rem solid $neutrals-B40; // 1px
+    box-shadow: 0.125rem 0.125rem 1.25rem 0rem #0000001f; // 2px 2px 20px
+}
+
+.status-chip-button-inner {
+    @extend .status-chip-button-typography;
+    background-color: $primary-green-50-color;
+    border-radius: 0.25rem; // 4px
+    padding: 0.5rem; // 8px
+    cursor: pointer;
+}
+
+.leftTitle {
+    color: $neutrals-B800;
+    font-family: 'Kenvue-sans';
+    font-size: 0.875rem; // 14px
+    font-weight: 400;
+    line-height: 1.125rem; // 18px
+    letter-spacing: 0;
+}
+
+.leftSub {
+    color: $neutrals-B400;
+    font-family: 'Kenvue-sans';
+    font-size: 0.75rem;
+    line-height: 1rem;
+    margin-top: 0.125rem;
+}
+
+.filter-chip-style {
+    background-color: #f3faf9;
+    border-color: #b0e7df;
+    border-width: 0.0625rem;
+    border-style: solid;
+}

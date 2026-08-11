@@ -1,0 +1,24 @@
+{
+    "performacemng.title": "Gestão do Desempenho",
+    "performacemng.subtitle":"Selecionar o nível de avaliação de desempenho",
+    "performacemng.favorites":"Os meus favoritos",
+    "performacemng.favoritespara":"Ainda não foram adicionados favoritos. Toque no ícone de coração junto ao nome do relatório ou à geografia do relatório para adicionar relatórios aqui e ter acesso mais rápido.",
+    "performacemng.global":"Global",
+    "performacemng.region":"Região",
+    "performacemng.cluster":"Cluster",
+    "performacemng.market":"Mercado",
+    "performacemng.site":"Sítio",
+    "performacemng.chooseTime":"Escolher o período de tempo",
+    "performacemng.noMatchesFound":"Nenhuma correspondência encontrada",
+    "performacemng.sorryNothingMatchesRecords":"Lamentamos, não há correspondências para a sua pesquisa. Por favor, tente usar um termo diferente.",
+    "performacemng.notTagged":"Não está associado a quaisquer relatórios para o filtro selecionado. Solicite acesso para ver os relatórios relevantes.",
+    "performacemng.searchResults":"Resultados da pesquisa",
+    "performacemng.reportsAccess":"Relatórios aos quais tem acesso",
+    "performacemng.reportsOutsideAccess":"Relatórios fora do seu acesso",
+    "performacemng.noReportsOutsideAccess":"Não existem relatórios fora do seu acesso para os filtros selecionados",
+    "kpi.userRoleSettings": "Configurações de função do usuário",
+    "kpi.addPrAndSecRole": "Adicione funções primárias e secundárias para começar a acompanhar os KPI’s relevantes para você",
+    "kpi.noRoleSetup":"Sem configuração de funções",
+    "kpi.goto":"Ir para"
+    
+}

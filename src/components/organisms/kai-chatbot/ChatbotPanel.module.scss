@@ -1,0 +1,90 @@
+@import '../../../assets/css/colors.scss';
+
+.chatDrawer {
+    :global(.ant-drawer-content-wrapper) {
+        font-family: 'kenvue-sans';
+        // top: calc(9vh + 2.5rem);
+        // bottom: 2vh;
+        height: auto !important;
+        overflow: hidden;
+        border-top-left-radius: 0.75rem;
+        border-bottom-left-radius: 0.75rem;
+        transition:
+            width 0.28s ease,
+            top 0.28s ease,
+            bottom 0.28s ease;
+        border: 1px solid;
+        border-image-source: linear-gradient(90deg, rgba(178, 175, 251, 0.07) 20.83%, rgba(239, 113, 113, 0.07) 80.3%);
+    }
+
+    :global(.ant-drawer-content) {
+        background: $secondary-purple-50-color ;
+        background-image: url('../../../assets/images/ChatbotBackground.svg');
+        background-repeat: no-repeat;
+        background-position: center center;        
+    }
+
+    :global(.ant-drawer-header) {
+        border-bottom: none;
+
+    }
+
+    :global(.ant-drawer-body) {
+        height: 100%;
+
+    }
+
+    :global(.ant-drawer-footer) {
+        border-top: none;
+        transition: transform 0.3s ease;
+
+    }
+}
+
+.historyDrawer {
+    :global(.ant-drawer-content-wrapper) {
+        font-family: 'kenvue-sans';
+        height: auto !important;
+        overflow: hidden;
+        border-top-left-radius: 0.75rem;
+        border-bottom-left-radius: 0.75rem;
+        transition:
+            width 0.28s ease,
+            top 0.28s ease,
+            bottom 0.28s ease;
+        border: 1px solid;
+        border-image-source: linear-gradient(90deg, rgba(178, 175, 251, 0.07) 20.83%, rgba(239, 113, 113, 0.07) 80.3%);
+    }
+
+
+    :global(.ant-drawer-header) {
+        border-bottom: none;
+
+    }
+
+    :global(.ant-drawer-body) {
+        height: 100%;
+
+    }
+
+    :global(.ant-drawer-footer) {
+        border-top: none;
+
+    }
+}
+
+
+.chatHistoryHeader {
+    font-size: 0.875rem;
+    color: $neutrals-B400;
+}
+
+.chatContent{   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    overflow: scroll;
+    margin-bottom: 1rem;
+}

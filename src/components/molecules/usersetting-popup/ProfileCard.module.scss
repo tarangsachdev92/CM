@@ -1,0 +1,37 @@
+@import '../../../assets/css/colors.scss';
+@import '../../../assets/css/common.scss';
+@import '../../../assets/css/fonts.scss';
+
+.profile-card {
+    margin-bottom: 1.5rem;
+    .profile-title {
+        color: $neutrals-B600;
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 1.25rem;
+        padding: 1rem;
+        background: $background-color-light-green;
+    }
+
+    .profile-content {
+        padding: 1rem;
+        background: $white-color;
+
+        .profile-item-title {
+            color: $neutrals-B300;
+            font-size: 0.75rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.25rem;
+        }
+
+        .profile-item-desc {
+            color: $neutrals-B800;
+            font-size: 0.75rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.25rem;
+        }
+    }
+}

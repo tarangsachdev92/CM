@@ -1,0 +1,133 @@
+@import '../../../assets/css/colors.scss';
+@import '../../../assets/css/common.scss';
+@import '../../../assets/css/fonts.scss';
+/* ToDoSettingsDialog.module.scss */
+/* ToDoSettingsDialog.module.scss */
+
+/* Title area: icon + text */
+.titleWrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/**
+ * Inner shell that forces dimensions regardless of the Dialog's own panel defaults.
+ * Target size: +30% width from 600 => 780px; -20% height from 513 => ~410px.
+ */
+.shell {
+    width: 100%;
+    height: 410px;
+    background: #fff;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column; /* vertical flow inside */
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Row splits nav/content horizontally */
+.row {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.topRule {
+    width: 100%;
+    height: 1px;
+    background: #e0e0e0; /* or use a design token from colors.scss */
+    /* Optional spacing below the rule if you want a gap before content */
+    margin-bottom: 8px;
+}
+
+.navButtonsTopRule {
+    width: 100%;
+    height: 1px;
+    background: #e0e0e0;
+    margin-bottom: 8px;
+}
+/* ToDoSettingsDialog.module.scss */
+
+/* Left nav */
+.nav {
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: #fff;
+    font-family: 'Kenvue-sans';
+}
+
+/* Nav buttons */
+.navBtn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* text left, icon right */
+    gap: 8px;
+    text-align: left;
+    background: transparent;
+    color: #333;
+    border: 0;
+    border-radius: 6px;
+    padding: 10px 12px;
+    cursor: pointer;
+
+    &:hover {
+        background: #f5f5f5;
+    }
+
+    &:focus-visible {
+        outline: 2px solid #000; /* or your token */
+        outline-offset: 2px;
+    }
+}
+
+.navBtnLabel {
+    font-family: 'kenvue-sans';
+    /* ensures label takes available space before the icon */
+    flex: 1 1 auto;
+}
+
+/* Active state -> BLACK background */
+.navBtnActive {
+    background: #fff; /* black background */
+    color: #fff; /* white text/icon for contrast */
+}
+
+/* Optional: active hover keeps it black */
+.navBtnActive:hover {
+    background: #fff;
+}
+/* ToDoSettingsDialog.module.scss */
+.content {
+    flex: 1;
+    padding: 16px;
+    /* Previously: overflow: auto; 
+       Change to hidden so the inner pane can own the scroll cleanly */
+    overflow: hidden;
+    background: #fff;
+
+    /* Important to allow child overflow containers to actually scroll */
+    min-height: 0;
+}
+
+/* Active state */
+
+.navBtnActive {
+    background: #fff; /* or transparent */
+    color: #000; /* black text */
+    font-weight: 600; /* optional emphasis */
+    /* optionally add a left border or indicator */
+    border-left: 3px solid #fff;
+}
+
+/* Right content area */
+
+/* List spacing */
+.list {
+    margin: 0;
+    padding-left: 20px;
+}

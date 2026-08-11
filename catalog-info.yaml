@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "SC-DAWA-commandcenter-web"
+  title: "SC-DAWA-commandcenter-web"
+  description: "commandcenter"
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+    bitbucket/repo-slug: kenvue
+    sonarqube.org/project-key: "sc-dawa-commandcenter-web"
+    nexus-repository-manager/docker.image-name:: "kahi-generic/command-center-web-dev/"

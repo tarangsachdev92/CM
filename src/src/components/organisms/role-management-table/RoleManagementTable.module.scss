@@ -1,0 +1,27 @@
+@import '../../../assets/css/colors.scss';
+
+.rm-container {
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid $neutrals-B30;
+    background-color: $white-color;
+}
+
+.rm-card-title {
+    color: $neutrals-B800;
+}
+
+.rm-card-description {
+    color: $neutrals-B200;
+}
+
+.search-box {
+    width: 400px;
+    justify-items: right;
+}
+
+
+
+:global(.menu-button-options-container) {
+    z-index: 9999 !important;
+}

@@ -1,0 +1,100 @@
+.container {
+    border: 1px solid #00B097;
+    border-radius: 4px;
+    padding: 8px;
+    background-color: #DFF5F2;
+    transition: all 0.2s ease;
+    cursor: grab;
+    &:hover {
+        border: 1px solid #33C0AC;
+        background-color: #F3FAF9;
+    }
+
+    &:hover .editBtn {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+    }
+}
+
+.container:active {
+    cursor: grabbing;
+}
+
+.subcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    transition: all 0.2s ease;
+    flex-direction: row;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.icon {
+    height: 15px;
+    width: 15px;
+}
+
+.text {
+    font-size: 12px;
+    color: #666666;
+    font-weight: 400;
+}
+
+.value {
+    font-size: 12px;
+    color: #3B3B3B;
+    font-weight: 400;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+}
+
+.editBtn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #2e7d6b;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(6px);
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        color: #1b5e54;
+    }
+}
+
+.underline {
+    background-color: #00B097;
+    height: 1px;
+    display: flex;
+    margin-top: 5px;
+}
+
+.closeBtn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #4A4A4A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        color: #1b5e54;
+    }
+}

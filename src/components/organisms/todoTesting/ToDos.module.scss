@@ -1,0 +1,169 @@
+@import '../../../assets/css/colors.scss';
+
+.card-children-content-text {
+    text-align: center;
+    color: $neutrals-B300;
+}
+
+.filter-chip-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 12px 0;
+    padding: 8px;
+
+    &.has-filters {
+        border: 1px solid #ccc;
+        border-radius: 6px;
+    }
+}
+
+.filter-chip-left {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.filter-label {
+    font-weight: 400;
+    font-family: 'kenvue-Sans', sans-serif; 
+    color: $neutrals-B800;
+    line-height: 40px;
+    font-size: 12px;
+    letter-spacing: 0px;
+    margin-left: 4px;
+}
+
+.clear-all-btn {
+    background-color: transparent;
+    color: #007d6b; 
+    border: none;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-weight: 400;
+    line-height: 20px;
+    font-size: 14px;
+    font-family: 'kenvue-Sans', sans-serif; 
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: #006a5c;
+        text-decoration: underline;
+    }
+}
+
+.card-children-content-text-anchor {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+    color: $primary-green-700-color;
+    cursor: pointer;
+    // Following CSS code is to create text-only button
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.card-children-content-text-anchor:hover {
+    color: $primary-green-700-color;
+}
+
+.todo-card-children {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.card-head-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-border {
+    border: 1px solid $neutrals-B40;
+    background-color: $white-color;
+}
+.card-mt-10,
+.mt10 {
+    margin-top: 0.65rem;
+}
+
+.cardcontent {
+    box-sizing: border-box;
+    margin-top: 0.65rem;
+}
+
+.content-container {
+    width: 100%;
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+.initial-loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 74vh;
+}
+
+.disabledcard {
+    background-color: $neutrals-B20 !important;
+}
+
+.selectedCard {
+    border-color: $secondary-blue-300-color !important;
+    background-color: $graph-blue-4-color !important;
+}
+
+.appreport-card-description {
+    margin-top: 0px !important;
+}
+
+.cursorblock {
+    pointer-events: none;
+}
+
+.taskCard {
+    border-right: 1px solid $neutrals-B40;
+}
+
+.taskCard-height {
+    min-height: 75vh;
+    max-height: 59vh;
+    overflow: auto;
+    padding: 1rem;
+}
+
+.taskDetails {    
+    padding-left: 24px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    flex: 2;
+}
+
+.taskCardtitle {
+    font-size: 0.75rem;
+    color: $neutrals-B200;
+}
+
+.empty-image {
+    margin-top: 25vh;
+    display: flex;
+    justify-content: center;
+}
+
+.empty-state-message {
+    text-align: center;
+}

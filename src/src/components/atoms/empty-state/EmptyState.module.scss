@@ -1,0 +1,29 @@
+@import '../../../assets/css/fonts.scss';
+@import '../../../assets/css/colors.scss';
+
+.empty-state-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.empty-state-typography-1 {
+    font-weight: 600;
+    font-size: $font-size-14;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: $neutrals-B300;
+}
+
+.empty-state-typography-2 {
+    font-weight: 400;
+    font-size: $font-size-12;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: $neutrals-B300;
+}

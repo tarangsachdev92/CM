@@ -1,0 +1,87 @@
+@import '../../../assets/css/colors.scss';
+@import '../../../assets/css/fonts.scss';
+
+.main-container {
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid $neutrals-B30;
+    background-color: $white-color;
+    min-height: 65vh;
+    margin-top: 10px;
+}
+
+.apps-and-reports-title {
+    padding: 1.5rem 1.5rem 0 1.5rem;
+    border-radius: 0.5rem;
+    border-bottom: 0.0625rem solid $neutrals-B30;
+    box-shadow: 0.125rem 0.125rem 0.5rem 0 rgba(0, 0, 0, 0.06);
+    background-image: url('../../../assets/images/permission-title-bg.svg');
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-color: $white-color;
+    height: 80px;
+}
+
+.apps-and-reports-description {
+    color: $neutrals-B200;
+}
+
+.apps-and-reports-heading {
+    font-size: $font-size-24;
+}
+
+.searchInput {
+    width: 30% !important;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.cards {
+    width: 94% !important;
+}
+
+.favorites-button {
+    height: 35px;
+    margin-right: 10px;
+}
+
+.outer-container {
+    z-index: 999;
+}
+
+.empty-grid {
+    min-height: 65vh;
+    padding-top: 100px;
+    margin-top: 100px;
+}
+
+.favorite-filter-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: auto;
+}
+
+.favorites-button-selected {
+    border: 2px solid $secondary-blue-400-color;
+}
+
+.custom-action-container {    
+    gap: 180px;
+}
+
+.header {
+    font-weight: 600;
+}
+
+.card-outer-container {
+    cursor: pointer;
+}
+
+.applied-filters-container {
+    width: 100%;
+}

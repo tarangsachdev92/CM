@@ -1,0 +1,130 @@
+@import '../../../assets/css/colors.scss';
+@import '../../../assets/css/fonts.scss';
+@import '../../../assets/css/common.scss';
+
+.container {
+    background-color: $white-color;
+    border-radius: 12px;
+    border: 1px solid $neutrals-B30;
+    padding: 24px;
+}
+
+.description-text {
+    color: $neutrals-B200;
+}
+
+.demand-planner-styles {
+    text-align: center;
+}
+
+.expanded-row-tooltip-container {
+    display: flex !important;
+    max-width: 25% !important;
+}
+
+.header-title-container {
+    display: flex;
+}
+
+.header-action-container {
+    display: flex;
+}
+
+.header-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.tooltip-id-text {
+    font-family: 'Kenvue-sans', sans-serif;
+    color: $white-color;
+    font-size: $font-size-8;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.tooltip-desc-text {
+    font-family: 'Kenvue-sans', sans-serif;
+    color: $white-color;
+    font-size: $font-size-12;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 136%;
+}
+
+.expnaded-row-users-count-container {
+    background-color: $white-color;
+    padding: 4px 8px;
+    border-radius: 4;
+    border: 1px solid $neutrals-B20;
+    display: none;
+}
+
+.app-container:hover {
+    .expnaded-row-users-count-container {
+        @extend .expnaded-row-users-count-container;
+        display: flex !important;
+    }
+}
+
+.row-edit-filterchip-container {
+    max-width: calc(100% - 16px) !important;
+}
+
+.row-view-filterchip-container {
+    max-width: calc(100% - 24px) !important;
+}
+
+.row-edit-tag-selector-container {
+    right: 0 !important;    
+}
+.application-tag-selector {
+    width: 100%;
+}
+.application-tag-selector-dropdown-container {
+    z-index: 998 !important;
+    right: 0 !important;
+    width: 260px !important;
+}
+.application-cell-container {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.application-permissions-cell-title {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 16px;
+    letter-spacing: 0px;
+    color: $neutrals-B200;
+}
+
+.application-permissions-cell-content {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0px;
+    color: $black-color;
+}
+.role_permissions_column {
+    text-align: center;
+}
+.row-edit-filterchip-container {
+    max-width: calc(100% - 16px) !important;
+}
+.adgroup-tag-selector-dropdown-container {
+    z-index: 9999 !important;
+    right: 0 !important;
+    width: fit-content;
+}
+
+.error-text-color {
+    color: $feedback-error-color;
+}
+
+.error-text-container {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center !important;
+}

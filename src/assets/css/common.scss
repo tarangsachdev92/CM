@@ -1,0 +1,91 @@
+@import './colors.scss';
+.space-h-4 {
+    width: 0.25rem;
+    height: 1px;
+}
+
+.space-h-8 {
+    width: 0.5rem;
+    height: 1px;
+}
+
+.space-h-16 {
+    width: 1rem;
+    height: 1px;
+}
+
+.space-v-8 {
+    height: 0.5rem;
+    width: 1px;
+}
+
+.space-v-16 {
+    height: 1rem;
+    width: 1px;
+}
+
+.space-v-24 {
+    height: 1.5rem;
+    width: 1px;
+}
+
+.border {
+    display: flex;
+    border-bottom: 1px solid $neutrals-B40;
+}
+
+.username-initials {
+    position: relative;
+    width: 3.75rem;
+    height: 3.75rem;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $avatar-background-color;
+    color: $avatar-title-color;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.username-initials-small {
+    position: relative;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $avatar-background-color;
+    border: 2px solid $secondary-coral-100-color;
+    color: $avatar-title-color;
+    font-weight: bold;
+    font-size: 0.75rem;
+}
+
+.toast-configuration {
+    position: fixed !important;
+    top: 50px;
+}
+
+.fixed-toast-configuration {
+    position: fixed !important;
+    top: 63px;
+    z-index: 999;
+    width: 91%;
+}
+
+/* Host-only: lock page scroll whenever an R&O flyout is in the DOM */
+body:has(#risk-and-opportunity-fly-out),
+body:has(#risk-and-opportunity-New-fly-out) {
+  overflow: hidden !important;
+  touch-action: none;
+}
+.snooze-dialog-scope .fiscal-calendar-main .fiscal-dates {
+  gap: 4px 1px !important;
+}
+.snooze-dialog-scope .fiscal-calendar-main .fiscal-days {
+  gap: 4px 1px !important;
+}

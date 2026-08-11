@@ -1,0 +1,153 @@
+.linked-forum-flyout {
+    :global(.flyout-body) {
+        padding: 0 !important;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+
+    :global(.flyout-footer) {
+        border-top: 1px solid #e8e8e8;
+        padding: 12px 16px;
+    }
+}
+
+.flyout-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+}
+
+.flyout-body {
+    overflow: hidden;
+    height: 100%;
+}
+
+/* ── Tabs ── */
+.tab-wrapper {
+    border-bottom: 1px solid #e8e8e8;
+
+    :global(.tab) {
+        padding: 0 16px;
+    }
+
+    :global(.tab-container) {
+        padding-bottom: 0;
+    }
+
+    :global(.tab-container-child-box) {
+        padding: 12px 0;
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+
+.tab-content {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.search-input {
+    width: 100%;
+    border: none;
+    border-radius: 0;
+}
+
+.search-input-forum {
+    width: 100% !important;
+    height: 60px;
+    border-radius: 0;
+    border-width: 0;
+    border-style: hidden;
+}
+
+.content-wrapper {
+    padding: 1rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.dropdown-wrapper {
+    margin-bottom: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    :global(.dropdown-component) {
+        max-width: 250px;
+    }
+
+    :global(.inputfield-text-container) {
+        max-width: 20px;
+    }
+
+    :global(.inputfield-icon-container) {
+        display: none;
+    }
+}
+
+.checkbox-list {
+    overflow-y: auto;
+    flex: 1;
+    max-height: calc(100vh - 300px);
+}
+
+.select-all-row {
+    padding: 4px 0;
+
+    :global(.checkbox-label-text) {
+        font-size: 14px;
+        font-weight: 500;
+        color: #1a1a1a;
+    }
+}
+
+.forum-row {
+    padding: 4px 0;
+}
+
+.forum-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #1a1a1a;
+    line-height: 1.4;
+}
+
+.forum-sub-label {
+    font-size: 13px;
+    color: #888;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.empty-state {
+    padding: 32px 0;
+    text-align: center;
+    color: #888;
+    font-size: 14px;
+}
+
+.loading-state {
+    padding: 8px 0;
+    color: #888;
+    font-size: 14px;
+}
+
+/* ── Map Persona tab ── */
+.persona-section-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #444;
+}
+
+/* ── Footer ── */
+.view-selected {
+    font-size: 13px;
+    font-weight: 500;
+    color: #444;
+}
+

@@ -1,0 +1,219 @@
+@import '../../../assets/css/colors.scss';
+@import '../../../assets/css/common.scss';
+@import '../../../assets/css/fonts.scss';
+
+
+.perm-container {
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid $neutrals-B30;
+    background-color: $white-color;
+    min-height: 65vh;
+}
+
+.perm-card-title {
+    color: $neutrals-B800;
+}
+
+.perm-card-description {
+    color: $neutrals-B200;
+}
+
+.search-box {
+    width: 400px;
+    justify-items: right;
+}
+
+.search-box-container {
+    right: 0px !important;
+}
+
+.description-text {
+    color: $neutrals-B200;
+}
+
+.role-styles {
+    text-align: center;
+}
+
+.table-container {
+    position: relative;
+    max-height: 100%;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.7);
+    z-index: 50;
+}
+
+.content-disabled {
+    opacity: 1;
+    pointer-events: none;
+}
+
+.perm-empty-state {
+    min-height: 65vh;
+}
+
+.perm-empty-state-title {
+    color: $neutrals-B300;
+}
+
+.perm-empty-state-description {
+    color: $neutrals-B200;
+}
+
+.perm-empty-state-link {
+    color: $primary-green-700-color;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    cursor: pointer;
+}
+
+.expanded-row-tooltip-container {
+    display: flex !important;
+    max-width: 25% !important;
+}
+
+.tooltip-id-text {
+    font-family: 'Kenvue-sans', sans-serif;
+    color: $white-color;
+    font-size: $font-size-8;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 16px;
+}
+
+.tooltip-desc-text {
+    font-family: 'Kenvue-sans', sans-serif;
+    color: $white-color;
+    font-size: $font-size-12;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 136%;
+}
+
+.perm-arrow-icon {
+    svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.perm-arrow-icon-active {
+    transform: rotate(180deg);
+}
+
+.container {
+    display: flex;
+    width: 97%;
+    border: 1px solid $neutrals-B30;
+    padding: 8px 16px;
+    border-radius: 8px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2px;
+}
+
+.filterLabel {
+    color: $neutrals-B200;
+    padding-right: 8px;
+}
+
+.error-text-color {
+    color: $feedback-error-color;
+}
+
+.role {
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 230px;
+    font-family: 'Kenvue-sans', sans-serif !important;
+}
+.custom-tooltip {
+    font-family: 'Kenvue-sans', sans-serif !important;
+    color: $white-color;
+}
+
+.role:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+.roleText {
+    white-space: nowrap !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+.permission-tooltip {
+    z-index: 9999 !important;
+    font-family: 'Kenvue-sans', sans-serif !important;
+    color: $white-color;
+    pointer-events: auto;
+}
+
+.permission-tooltip-wrapper {
+    display: inline-block;
+}
+
+.table-class table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+/* Sticky header cell for the first column (scoped) */
+.table-class thead th:first-child {
+    position: sticky;
+    left: 0;
+    //z-index: 3; /* above body cells */
+    background: $white-color; /* avoid see-through */
+    box-shadow: 1px 0 0 0 rgba(0, 0, 0, 0.06); /* subtle separator */
+}
+
+/* Sticky body cells for the first column (scoped) */
+.table-class tbody td:first-child {
+    position: sticky;
+    left: 0;
+    //z-index: 2; /* below header, above other cells */
+    background: $white-color;
+    box-shadow: 1px 0 0 0 rgba(0, 0, 0, 0.06);
+}
+
+/* If your expand arrow sits in the first cell and needs higher stacking */
+.table-class tbody td:first-child .perm-arrow-icon {
+    position: relative;
+    z-index: 4;
+}
+
+
+.filledSquare {
+  width: 1.10rem;
+  height: 1.10rem;
+  background: var(--neutrals-B80, #d1d5db); 
+  color: var(--neutrals-B300, #9ca3af);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

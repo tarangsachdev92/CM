@@ -1,0 +1,63 @@
+@import '../../../assets/css/colors.scss';
+@import '../../../assets/css/common.scss';
+
+
+.impact-input-grp-add-kpi-link{
+    color: $primary-green-700-color !important;    
+    font-family: 'kenvue-sans',sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    line-height: 20px;
+    letter-spacing: 0px;
+    padding-left: 0px;
+
+    &:hover {
+        color: $primary-green-700-color !important;      
+    }
+    &:focus,
+    &.ant-input-focused {
+      color: $primary-green-700-color !important;      
+    }
+    &:disabled{
+        color: $neutrals-B100 !important;
+    }
+}
+
+.impact-input-grp-add-kpi-link:active {
+    color: $primary-green-700-color;
+}
+
+
+.add-rule-dimension-title{
+    font-size: 0.8rem;
+    color: $neutrals-B500;
+}
+
+.rule-dimension-delete-icon-btn{    
+    height: 2.5rem;
+    width: 40px;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    background: $white-color;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.rule-dimension-delete-icon-btn:disabled {
+    background: $neutrals-B40;
+    color: $neutrals-B40;
+}
+
+.dimension-row{
+    margin-bottom: 5px;
+}
+
+.form-required-fields {
+    color: $alert-icon-color;
+}

@@ -1,0 +1,23 @@
+{ 
+    "performacemng.title": "Performance Management",
+    "performacemng.subtitle":"Select Performance Review Level",
+    "performacemng.favorites":"My Favorites",
+    "performacemng.favoritespara":"No Favorites added yet. Tap the heart icon next toreport name or report geography to add reports herefor quicker access",
+    "performacemng.global":"Global",
+    "performacemng.region":"Region",
+    "performacemng.cluster":"Cluster",
+    "performacemng.market":"Market",
+    "performacemng.site":"Site",
+    "performacemng.chooseTime":"Choose Time Period",
+    "performacemng.noMatchesFound":"No Matches Found",
+    "performacemng.sorryNothingMatchesRecords":"Sorry, nothing matches your search. Please try using a different term.",
+    "performacemng.notTagged":"You are not tagged to any reports for the selected filter. Request Access to view relevant reports.",
+    "performacemng.searchResults":"Search results",
+    "performacemng.reportsAccess":"Reports you have access to",
+    "performacemng.reportsOutsideAccess":"Reports outside your access",
+    "performacemng.noReportsOutsideAccess":"There are no reports outside your access for the selected filters",
+    "kpi.userRoleSettings":"User Role Settings",
+    "kpi.addPrAndSecRole":"Add primary & secondary roles, to start tracking KPI’s relevant to your",
+    "kpi.noRoleSetup":"No Role Setup",
+    "kpi.goto":"Go to"
+}

@@ -1,0 +1,71 @@
+$font-size-4: 0.25rem;
+$font-size-8: 0.5rem;
+$font-size-10: 0.625rem;
+$font-size-12: 0.75rem;
+$font-size-14: 0.875rem;
+$font-size-16: 1rem; // Base Size 16px
+$font-size-20: 1.25rem;
+$font-size-24: 1.5rem;
+
+@font-face {
+    font-family: 'kenvue-sans-medium-italic';
+    src:
+        local('Kenvue_Sans_Medium_Italic'),
+        url('../fonts/Kenvue_Sans_Medium_Italic.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'kenvue-sans-bold-italic';
+    src:
+        local('Kenvue_Sans-Bold-Italic'),
+        url('../fonts/Kenvue_Sans-Bold_Italic.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'kenvue-sans-bold';
+    src:
+        local('Kenvue_Sans-Bold'),
+        url('../fonts/Kenvue_Sans-Bold.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'kenvue-sans';
+    src:
+        local('Kenvue_Sans-Regular'),
+        url('../fonts/Kenvue_Sans-Regular.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'kenvue-sans-italic';
+    src:
+        local('Kenvue_Sans-Regular_Italic'),
+        url('../fonts/Kenvue_Sans-Regular_Italic.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'kenvue-sans-extra-bold-italic';
+    src:
+        local('Kenvue_Sans-Extrabold_Italic'),
+        url('../fonts/Kenvue_Sans-Extrabold_Italic.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'kenvue-sans-extra-bold';
+    src:
+        local('Kenvue_Sans-Extrabold'),
+        url('../fonts/Kenvue_Sans-Extrabold.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'kenvue-sans-semi-bold-italic';
+    src:
+        local('Kenvue_Sans-Semibold_Italic'),
+        url('../fonts/Kenvue_Sans-Semibold_Italic.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'kenvue-sans-semi-bold';
+    src:
+        local('Kenvue_Sans-Semibold'),
+        url('../fonts/Kenvue_Sans-Semibold.otf') format('truetype');
+}

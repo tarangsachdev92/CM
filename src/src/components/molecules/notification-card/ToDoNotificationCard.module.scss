@@ -1,0 +1,240 @@
+@import '../../../assets/css/colors.scss';
+@import '../../../assets/css/common.scss';
+@import '../../../assets/css/fonts.scss';
+
+.iso-card-sub-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0px !important;
+    width: auto !important;
+    font-family: 'kenvue-Sans', sans-serif;
+}
+
+.iso-card-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 1.5%;
+    height: auto !important;
+    width: auto !important;
+}
+
+.iso-card-avatar-container {
+    height: auto !important;
+    width: auto !important;
+    position: relative;
+    display: inline-block;
+}
+
+.iso-card-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.25rem !important;
+    height: 2.25rem !important;
+    border-radius: 2rem !important;
+    object-fit: cover;
+    padding-top: 10%;
+}
+
+.iso-card-type {
+    width: 11px !important;
+    height: 11px !important;
+    z-index: 1;
+    top: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: $white-color;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.iso-card-title-container {
+    display: flex;
+    flex-direction: column;
+    width: 90% !important;
+    padding-left: 1% !important;
+}
+
+.iso-card-title {
+    font-size: 12px;
+    font-weight: 600;
+    width: 100% !important;
+    color: $neutrals-B800 !important;
+}
+
+.iso-card-subtitle {
+    font-size: 10px;
+    font-weight: 400;
+    color: $neutrals-B100;
+}
+
+.iso-card-body-text-container {
+    width: auto !important;    
+    margin-bottom: 1.5% !important;
+    height: auto !important;
+}
+
+.iso-card-body-text-container {
+    color: $neutrals-B600 !important;
+    font-size: 12px !important;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.iso-card-body {
+    border: 1px solid $neutrals-B40;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: $neutrals-B10;
+    display: flex;
+    flex-direction: column;
+    height: auto !important;
+    width: auto !important;
+    justify-content: space-between !important;
+    padding-top: 8px !important;
+}
+
+
+.iso-card-body-grp{
+    gap :6px;
+}
+
+.iso-card-body-grp-text{
+   color: $neutrals-B600;
+   font-size: 12px;
+   font-weight: 400;
+}
+.iso-card-body-primary {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: auto !important;
+    height: fit-content !important;
+    padding-bottom: 8px !important;
+    padding-left: 2% !important;
+    padding-right: 2% !important;
+}
+
+.iso-card-body-primary-title {
+    color: $neutrals-B200;
+    font-weight: 400;
+    font-size: 10px !important;
+    line-height: 16px !important;
+}
+
+.iso-card-body-secondary {
+    display: flex;
+    flex-direction: column !important;
+    width: inherit !important;
+    background-color: $white-color;
+    border: 1px solid $neutrals-B30;
+    border-radius: 8px !important;
+    gap: 12px;
+    box-shadow: 2px 2px 8px 0px $box-shadow-black-color;
+    height: auto !important;
+    padding: 16px !important;
+}
+
+.iso-card-body-secondary-s1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0.2rem;
+}
+
+.iso-card-body-secondary-s1-text-grp {
+    display: flex;
+    flex-direction: column;
+}
+
+.iso-card-body-s1-text-t1 {
+    font-size: 12px !important;
+    font-weight: 600;
+    line-height: 20px !important;
+    color: $neutrals-B800;
+}
+
+.iso-card-body-s1-text-t2 {
+    font-size: 10px !important;
+    font-weight: 400;
+    line-height: 16px !important;
+    color: $neutrals-B200;
+}
+
+.iso-card-body-secondary-s2 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px !important;
+}
+
+.iso-card-secondary-s2-item-grp {
+    display: flex;
+    flex-direction: row !important;
+    width: inherit !important;
+    gap: 4px !important;
+    align-items: center !important;
+}
+
+.iso-card-secondary-s2-item-grp-pair {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    padding-right: 6px;
+
+}
+.iso-card-secondary-s2-item-label {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 400;
+    color: $neutrals-B200;
+}
+
+.iso-card-secondary-s2-item-value {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 400;
+    color: $neutrals-B800;
+}
+
+.iso-card-body-secondary-s3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.iso-card-body-secondary-s3-tag {
+    background-color: $background-color-light-green;
+    border: 1px solid $primary-green-100-color;
+    border-radius: 4px;
+    gap: 4px;
+    padding: 4px 8px 4px 8px;
+}
+
+.iso-card-body-secondary-s3-tag-text {
+    color: $neutrals-B500;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+ 
+
+.iso-card-expand-icon {
+    padding-top: 7% !important;
+    width: 10px !important;
+    height: 10px !important;
+    cursor: pointer;
+}
+
+.iso-card-close-icon {
+    cursor: pointer;
+}
+
+.mt10 {
+    margin-top: 0.65rem;
+    padding: 0.7rem;
+}

@@ -1,0 +1,47 @@
+@import '../../../assets/css/colors.scss';
+
+.profile-section-card {
+    margin-top: 5%;
+    border: 1px solid $neutrals-B30;
+    border-radius: 8px;
+    width: 342px !important;
+    max-width: 352px !important;
+    font-family: inherit;
+    background-color: $white-color ;
+    justify-self: center;
+    height: 35px;
+    max-height: 40px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    box-shadow: 0 2px 6px $box-shadow-black-color;
+    gap: 6px;
+    cursor: pointer;
+    overflow: hidden;
+    position: sticky;
+}
+
+.profile-section-icon {
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 16px;
+    width: 24px !important;
+    height: 24px !important;
+}
+
+.profile-section-icon svg {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.profile-section-text {
+    position: sticky;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: $neutrals-B600;
+    
+}
