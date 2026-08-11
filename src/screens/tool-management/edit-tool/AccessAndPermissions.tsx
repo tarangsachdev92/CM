@@ -59,6 +59,7 @@ import { getLeadershipRoles } from '../../../services/roles';
 import PermissionMatrixTable, {
     PermissionMatrixRow,
 } from '../../../components/molecules/permission-matrix/PermissionMatrixTable';
+import { applyPersonaPermissionToggleToRows } from '../../../components/molecules/permission-matrix/permissionMatrixUtils';
 import {
     FlyoutCheckboxItemForum,
     RoleSelectionFlyoutForum,
@@ -2320,39 +2321,9 @@ export default function AccessAndPermissions({
                     mode="edit"
                     onPermissionToggle={(rowKey, personaId, checked) => {
                         setIsPersonaDirty(true);
-                        setPermissionMatrixRows(prev => {
-                            if (rowKey === 'ALL') {
-                                return prev.map(row => {
-                                    if (row.isPersonaSelectorRow) return row;
-
-                                    const currentValue = row.personaAccess?.[personaId];
-
-                                    //  IMPORTANT: only update allowed permissions
-                                    if (currentValue === null) {
-                                        return row; // ❌ keep X untouched
-                                    }
-
-                                    return {
-                                        ...row,
-                                        personaAccess: {
-                                            ...row.personaAccess,
-                                            [personaId]: checked, // ✅ update only allowed ones
-                                        },
-                                    };
-                                });
-                            }
-
-                            return prev.map(row => {
-                                if (row.key !== rowKey) return row;
-                                return {
-                                    ...row,
-                                    personaAccess: {
-                                        ...row.personaAccess,
-                                        [personaId]: checked,
-                                    },
-                                };
-                            });
-                        });
+                        setPermissionMatrixRows(prev =>
+                            applyPersonaPermissionToggleToRows(prev, rowKey, personaId, checked),
+                        );
                     }}
                 />
             </div>

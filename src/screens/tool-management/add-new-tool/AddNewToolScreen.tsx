@@ -87,6 +87,7 @@ import {
 import { validateUrl } from '../../../utils/validation';
 import PermissionMatrixTable from '../../../components/molecules/permission-matrix/PermissionMatrixTable';
 import { PermissionMatrixRow } from '../../../components/molecules/permission-matrix/PermissionMatrixTable';
+import { applyPersonaPermissionToggleToRows } from '../../../components/molecules/permission-matrix/permissionMatrixUtils';
 
 import {
     FlyoutCheckboxItemForum,
@@ -3812,35 +3813,9 @@ function AddNewToolScreen() {
         personaId: string,
         checked: boolean,
     ) => {
-        setPermissionMatrixRows(prev => {
-            // BULK (header click only)
-            if (rowKey === 'ALL') {
-                return prev.map(row => {
-                    if (row.isPersonaSelectorRow) return row;
-
-                    return {
-                        ...row,
-                        personaAccess: {
-                            ...row.personaAccess,
-                            [personaId]: checked,
-                        },
-                    };
-                });
-            }
-
-            // SINGLE checkbox
-            return prev.map(row => {
-                if (row.key !== rowKey) return row;
-
-                return {
-                    ...row,
-                    personaAccess: {
-                        ...row.personaAccess,
-                        [personaId]: checked,
-                    },
-                };
-            });
-        });
+        setPermissionMatrixRows(prev =>
+            applyPersonaPermissionToggleToRows(prev, rowKey, personaId, checked),
+        );
     };
 
     const handleLevelChange = (option: any) => {

@@ -2,6 +2,7 @@ import React from 'react';
 import { Table, CheckBox, Icon } from 'konnect-react-components';
 import { Flex } from 'antd';
 import styles from './PermissionMatrixTable.module.scss';
+import { isPersonaPermissionSelectable } from './permissionMatrixUtils';
 
 export interface PermissionMatrixPersona {
     personaId: string;
@@ -70,8 +71,8 @@ const PermissionMatrixTable: React.FC<PermissionMatrixTableProps> = ({
                 const dataRows = rows.filter(r => !r.isPersonaSelectorRow);
 
                 // only consider allowed rows (ignore X rows)
-                const allowedRows = dataRows.filter(
-                    r => r.personaAccess?.[persona.personaId] !== null,
+                const allowedRows = dataRows.filter(r =>
+                    isPersonaPermissionSelectable(r.personaAccess?.[persona.personaId]),
                 );
 
                 const checkedCount = allowedRows.filter(
@@ -86,7 +87,7 @@ const PermissionMatrixTable: React.FC<PermissionMatrixTableProps> = ({
                     <Flex justify="center">
                         <CheckBox
                             checked={isAllChecked}
-                            disabled={!isEditable}
+                            disabled={!isEditable || totalCount === 0}
                             onChange={(checked: boolean) => {
                                 if (!isEditable) return;
                                 // ONLY header triggers ALL
@@ -99,8 +100,8 @@ const PermissionMatrixTable: React.FC<PermissionMatrixTableProps> = ({
 
             const value = record.personaAccess?.[persona.personaId];
 
-            /* No access for this persona */
-            if (value === null) {
+            /* Restricted / not applicable for this persona -> non-selectable "X" */
+            if (!isPersonaPermissionSelectable(value)) {
                 return (
                     <Flex justify="center">
                         <Icon name="x-close" size="m" color="neutrals-B100" />
