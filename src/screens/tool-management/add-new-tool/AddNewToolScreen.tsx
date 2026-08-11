@@ -188,6 +188,7 @@ function AddNewToolScreen() {
         reportPeriodId: string;
         reportGeography: string;
         reportGeographyId: string;
+        geographyCount: number;
         personaRoles: Record<string, OptionType[]>;
         linkedForum: OptionType[];
         forumPersonaMapping?: PersonaMapping;
@@ -854,13 +855,14 @@ function AddNewToolScreen() {
 
             const period = reportPeriodOptions.find(opt => opt.label === item.reportPeriod);
 
-            const selectedGeoLabels = item.reportGeography
-                ? item.reportGeography.split(',').map(g => g.trim())
+            // Use the ids captured at selection time. Deriving them by matching the
+            // joined label string drops any geography whose name contains a comma.
+            const selectedGeoIds = item.reportGeographyId
+                ? item.reportGeographyId
+                      .split(',')
+                      .map(id => id.trim())
+                      .filter(Boolean)
                 : [];
-
-            const selectedGeoIds = geographyByLevelData
-                .filter((g: any) => selectedGeoLabels.includes(String(g.name ?? g.geographyName)))
-                .map((g: any) => String(g.geographyId ?? g.id));
 
             const availableGeoOptions = geographyByLevelData.filter(
                 (g: any) => g.geographyId !== 0 && String(g.name ?? '').toUpperCase() !== 'ALL',
@@ -3417,8 +3419,9 @@ function AddNewToolScreen() {
             reportLevelId: String(dialogReportLevel.value),
             reportPeriod: String(dialogReportPeriod.label),
             reportPeriodId: String(dialogReportPeriod.value),
-            reportGeography: dialogReportGeography.map(g => g.label).join(','),
+            reportGeography: dialogReportGeography.map(g => g.label).join(', '),
             reportGeographyId: dialogReportGeography.map(g => g.value).join(','),
+            geographyCount: dialogReportGeography.length,
             personaRoles: reportCombinationPersonas.reduce(
                 (acc, persona) => {
                     acc[String(persona.personaId)] = [];
@@ -3669,7 +3672,7 @@ function AddNewToolScreen() {
                     <Tag
                         size="L"
                         text={`${record.reportLevel} :`}
-                        chipText={String(record.reportGeography.split(', ').length)}
+                        chipText={String(record.geographyCount)}
                         onClick={() => {}}
                         tagBgColor="#F3FAF9"
                         tagBorderColor="#B0E7DF"
